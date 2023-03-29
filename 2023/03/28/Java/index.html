@@ -24,7 +24,7 @@
 <meta property="og:description" content="Java常识类长期支持版本(LTS ):JDK8、JDK11、JDK17JavaSE:标准版，用于桌面应用的开发，是其他两个版本的基础.JavaME:Java语言的标准版，用于嵌入式电子设备(电视机,照相机等)或小型移动设备.JavaEE:Java语言的企业版,用于web方向的网页开发.Java能做什么:桌面应用开发工具:各种税务管理软件 IDEA Clion Pycharm.企业级应用开发:微">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2023-03-27T16:15:22.810Z">
-<meta property="article:modified_time" content="2023-03-26T16:15:32.990Z">
+<meta property="article:modified_time" content="2023-03-29T03:21:19.674Z">
 <meta property="article:author" content="冷星">
 <meta name="twitter:card" content="summary_large_image">
   
@@ -81,7 +81,7 @@
 
 
   
-</head>
+<meta name="generator" content="Hexo 6.3.0"></head>
 
 
 <body>
@@ -230,7 +230,7 @@
         
         
         
-          299 分钟
+          302 分钟
         
       </span>
     
@@ -639,8 +639,41 @@
 <h2 id="标准javaBean类"><a href="#标准javaBean类" class="headerlink" title="标准javaBean类"></a>标准javaBean类</h2><p>Java Bean 是一种类，而且是特殊的、可重用的类。<br>Java language 是一种面向对象的编程语言，类是面向对象的编程语言的基础；可重用又是面向对象编程思想存在的意义之一，所以起名 Bean 很是形象。<br>类名需要见名知意<br>成员变量使用private修饰<br>提供至少两个构造方法<br> 1.无参<br> 2.有参<br>成员方法要提供 每一个成员变量所对应的set&#x2F;get,如果还有其他行为也需要加上</p>
 <h2 id="Java内存分配介绍-算是复习"><a href="#Java内存分配介绍-算是复习" class="headerlink" title="Java内存分配介绍(算是复习?)"></a>Java内存分配介绍(算是复习?)</h2><p>jvm把内存分为五块区域:栈 堆 方法区 本地方法栈 寄存器<br>当运行一个类时,这个类的字节码会加载在方法区中临时存储,在jdk7之前堆和方法区连在一起,实际上也确实连在一起.而后取消方法区,新增元空间,将方法区的功能拆分给堆与元空间.<br>方法被调用时进栈<br>new出的数据都会放在堆空间</p>
 <h3 id="一个对象的内存图"><a href="#一个对象的内存图" class="headerlink" title="一个对象的内存图"></a>一个对象的内存图</h3><p>Student s &#x3D; new Student();<br>1.加载class文件进方法区<br>2.声明局部变量s<br>3.在堆空间中开辟空间存放变量<br>4.默认初始化 (int &#x3D; 0)<br>5.显示初始化 (初始化为成员变量的定义值)<br>6.构造方法初始化<br>7.将地址值赋予左边的局部变量</p>
-<p>再次创建对象时,.class不需要重复加载,重复使用即可(main方法尚未执行完毕)<br>当两个变量指向同一个空间时(Student stu2 &#x3D; stu1;),任何对两个变量的修改都会影响同一内存地址中的值.</p>
-
+<h3 id="两个对象的内存图"><a href="#两个对象的内存图" class="headerlink" title="两个对象的内存图"></a>两个对象的内存图</h3><p>再次创建对象时,.class不需要重复加载,重复使用即可(main方法尚未执行完毕)<br>当两个变量指向同一个空间时(Student stu2 &#x3D; stu1;),任何对两个变量的修改都会影响同一内存地址中的值.<br>其余和单个差不多</p>
+<h3 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h3><p>基本数据类型数据值都储存在自己的空间中<br>new出的数据都是引用数据类型，在栈内存中存放了一个指向堆内存中的地址值，实际值储存在堆内存中</p>
+<h3 id="this的内存原理"><a href="#this的内存原理" class="headerlink" title="this的内存原理"></a>this的内存原理</h3><p>this实际指向所在方法调用者的地址<br>对象创建时，对象中会默认初始化&#x2F;显示初始化。然后例如 s.set***()时，方法内的this实际指向了对象s的地址，而非形参</p>
+<h3 id="成员变量和局部变量的区别"><a href="#成员变量和局部变量的区别" class="headerlink" title="成员变量和局部变量的区别"></a>成员变量和局部变量的区别</h3><table>
+    <tr style="background-color: darkred;">
+        <th>区别</th>
+        <th>成员变量</th>
+        <th>局部变量</th>
+    </tr>
+    <tr>
+        <td>类中位置不同</td>
+        <td>类中，方法外</td>
+        <td>方法内、方法声明上</td>
+    </tr>
+    <tr>
+        <td>初始化值不同</td>
+        <td>有默认初始化值</td>
+        <td>没有，使用之前需要完成赋值</td>
+    </tr>
+    <tr>
+        <td>内存位置不同</td>
+        <td>堆内存</td>
+        <td>栈内存</td>
+    </tr>
+    <tr>
+        <td>生命周期不同</td>
+        <td>随着对象的创建而存在<br>随着对象的消失而消失</td>
+        <td>随着方法的调用而存在<br>随着方法的运行结束而消失</td>
+    </tr>
+    <tr>
+        <td>作用域</td>
+        <td>整个类中有效</td>
+        <td>当前方法中有效</td>
+    </tr>
+</table>
                 
               </div>
             
@@ -701,12 +734,6 @@
                 <div class="post-prevnext my-3">
                   <article class="post-prev col-6">
                     
-                    
-                      <a href="/2023/03/28/%E6%96%B0%E5%BB%BA%20%E6%96%87%E6%9C%AC%E6%96%87%E6%A1%A3/" title="">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile"></span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
                     
                   </article>
                   <article class="post-next col-6">
