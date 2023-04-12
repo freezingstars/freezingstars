@@ -16,15 +16,15 @@
   <meta name="author" content="冷星">
   <meta name="keywords" content="">
   
-    <meta name="description" content="页内所使用CSS样式为方便管理统一使用行内式，但仍会给出内联式代码  基础HTML的全称为Hyper Text Markup Language超文本标记语言网页的组成元素有文本 图片主要这俩 音频 视频 超链接网页实质上是由代码组成的前端的代码通过浏览器的转化(解析与渲染)组成用户看到的网页一个标准的web骨架由头部与身体组成,同时要在首行声明语言 123456789&lt;!DOCTYPE ht">
+    <meta name="description" content="#box1{     width: 100px;     height: 150px;     background-color: yellow;     text-align: center;     line-height: 200px;     }     #div1{         width:40px;         height: 40px;         backg">
 <meta property="og:type" content="article">
 <meta property="og:title" content="前端学习">
 <meta property="og:url" content="http://example.com/2023/03/28/%E5%89%8D%E7%AB%AF/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="页内所使用CSS样式为方便管理统一使用行内式，但仍会给出内联式代码  基础HTML的全称为Hyper Text Markup Language超文本标记语言网页的组成元素有文本 图片主要这俩 音频 视频 超链接网页实质上是由代码组成的前端的代码通过浏览器的转化(解析与渲染)组成用户看到的网页一个标准的web骨架由头部与身体组成,同时要在首行声明语言 123456789&lt;!DOCTYPE ht">
+<meta property="og:description" content="#box1{     width: 100px;     height: 150px;     background-color: yellow;     text-align: center;     line-height: 200px;     }     #div1{         width:40px;         height: 40px;         backg">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2023-03-27T16:15:15.385Z">
-<meta property="article:modified_time" content="2023-03-29T03:38:01.167Z">
+<meta property="article:modified_time" content="2023-04-12T13:10:16.045Z">
 <meta property="article:author" content="冷星">
 <meta name="twitter:card" content="summary_large_image">
   
@@ -219,7 +219,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          12k 字
+          16k 字
         
       </span>
     
@@ -230,7 +230,7 @@
         
         
         
-          101 分钟
+          130 分钟
         
       </span>
     
@@ -273,8 +273,31 @@
             
               <div class="markdown-body">
                 
-                <p>页内所使用CSS样式为方便管理统一使用行内式，但仍会给出内联式代码</p>
-<hr>
+                <hr>
+<style>
+    #box1{
+    width: 100px;
+    height: 150px;
+    background-color: yellow;
+    text-align: center;
+    line-height: 200px;
+    }
+    #div1{
+        width:40px;
+        height: 40px;
+        background: skyblue;
+    }
+    div.h{
+        color: purple;
+        background: yellow;
+    }
+    span.h{
+        color: skyblue;
+        background: green;
+    }
+</style>
+
+
 <h1 id="基础"><a href="#基础" class="headerlink" title="基础"></a>基础</h1><p>HTML的全称为<ruby>Hyper Text Markup Language<rt>超文本标记语言</rt></ruby><br>网页的组成元素有<strong><ruby>文本 图片<rt>主要这俩</rt></ruby></b></strong> 音频 视频 超链接<br>网页实质上是由代码组成的<br>前端的代码通过浏览器的转化(解析与渲染)组成用户看到的网页<br>一个标准的web骨架由头部与身体组成,同时要在首行声明语言</p>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs html"><span class="hljs-meta">&lt;!DOCTYPE <span class="hljs-keyword">html</span>&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">html</span>&gt;</span><br>	<span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span><br>		<span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">charset</span>=<span class="hljs-string">&quot;utf-8&quot;</span>&gt;</span><br>		<span class="hljs-tag">&lt;<span class="hljs-name">title</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">title</span>&gt;</span><br>	<span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span><br>	<span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span><br>	<span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span><br><span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span><br></code></pre></td></tr></table></figure>
 <p>开发工具有vscode HBuilderX等,但此二较为热门<br>vscode可以通过输入!,并使用tab补全第一项内容进行框架生成</p>
@@ -412,8 +435,22 @@
 </tr>
 </tbody></table>
 <p><a href="www.baidu.com" target="_blank">跳转到百度</a></p>
-<h1 id="列表"><a href="#列表" class="headerlink" title="列表"></a>列表</h1><h2 id="无序列表"><a href="#无序列表" class="headerlink" title="无序列表"></a>无序列表</h2><p><del>这一块还是markdown语法方便</del><br>HTML的无序列表使用</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs HTML"><span class="hljs-tag">&lt;<span class="hljs-name">ul</span>&gt;</span><br>	<span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>赤<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span><br>	<span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>橙<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span><br>	<span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>黄<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span><br>	<span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>绿<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span><br><span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span><br>- 青  <span class="hljs-comment">&lt;!--此处开始为markdown的无序语法--&gt;</span><br>- 蓝<br>- 紫<br></code></pre></td></tr></table></figure>
+<h1 id="列表"><a href="#列表" class="headerlink" title="列表"></a>列表</h1><p>列表的CSS样式写法为</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs CSS"><span class="hljs-selector-class">.a</span>&#123;    <span class="hljs-comment">/*使用类选择器或者id*/</span><br>	<span class="hljs-attribute">list-style-type</span>:square ;  <span class="hljs-comment">/*type可以换成别的值*/</span><br>&#125;<br></code></pre></td></tr></table></figure>
+<p>常见的属性值有</p>
+<ul>
+<li>none：不使用项目符号</li>
+<li>disc：实心圆</li>
+<li>circle：空心圆</li>
+<li>square：实心方块</li>
+<li>decimal：阿拉伯数字 </li>
+<li>lower-alpha：小写英文字母 </li>
+<li>upper-alpha：大写英文字母 </li>
+<li>lower-roman：小写罗马数字 </li>
+<li>upper-roman：大写罗马数字</li>
+</ul>
+<h2 id="无序列表"><a href="#无序列表" class="headerlink" title="无序列表"></a>无序列表</h2><p><del>这一块还是markdown语法方便</del><br>HTML的无序列表使用,type的类型可以是disc(默认值),circle,square</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs HTML"><span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;square&quot;</span>&gt;</span><br>	<span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>赤<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span><br>	<span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>橙<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span><br>	<span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>黄<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span><br>	<span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>绿<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span><br><span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span><br>- 青  <span class="hljs-comment">&lt;!--此处开始为markdown的无序语法--&gt;</span><br>- 蓝<br>- 紫<br></code></pre></td></tr></table></figure>
 <ul>
     <li>赤</li>
     <li>橙</li>
@@ -426,8 +463,9 @@
 <li>蓝</li>
 <li>紫<br>出现一点空行是因为markdown语法和HTML语法不能相邻使用</li>
 </ul>
-<h2 id="有序"><a href="#有序" class="headerlink" title="有序"></a>有序</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs HTML"><span class="hljs-tag">&lt;<span class="hljs-name">ol</span>&gt;</span><br>	<span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>张三<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span><br>	<span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>李四<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span><br><span class="hljs-tag">&lt;/<span class="hljs-name">ol</span>&gt;</span><br>3. 王五 <span class="hljs-comment">&lt;!--然而,markdown的有序在前面加序号空格就行了--&gt;</span><br></code></pre></td></tr></table></figure>
-<ol>
+<h2 id="有序"><a href="#有序" class="headerlink" title="有序"></a>有序</h2><p>有序列表可以更改序号的类型,type后的值可以是a,A,i,I</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs HTML"><span class="hljs-tag">&lt;<span class="hljs-name">ol</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;A&quot;</span>&gt;</span><br>	<span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>张三<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span><br>	<span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>李四<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span><br><span class="hljs-tag">&lt;/<span class="hljs-name">ol</span>&gt;</span><br>3. 王五 <span class="hljs-comment">&lt;!--然而,markdown的有序在前面加序号空格就行了--&gt;</span><br></code></pre></td></tr></table></figure>
+<ol type="A">
     <li>张三</li>
     <li>李四</li>
 </ol>
@@ -1123,6 +1161,172 @@ It was a dark and stormy night...
 <li>rgb表示法,如rgb(0,0,0),rgb(255,255,255)</li>
 <li>rgba表示法：红绿蓝三原色+a表示透明度，取值范围为0-1，如rgba(255,255,255,0.5)</li>
 <li>十六进制表示法:#开头，将数字转换成16进制表示,如#000000，#ff0000</li>
+</ul>
+<h1 id="盒"><a href="#盒" class="headerlink" title="盒"></a>盒</h1><h2 id="盒样例"><a href="#盒样例" class="headerlink" title="盒样例"></a>盒样例</h2><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs css"><span class="hljs-selector-id">#box1</span>&#123;<br>	<span class="hljs-attribute">width</span>: <span class="hljs-number">100px</span>;   <br>	<span class="hljs-attribute">height</span>: <span class="hljs-number">150px</span>;<br>	<span class="hljs-attribute">background-color</span>: yellow;<br>	<span class="hljs-attribute">text-align</span>: center;<br>	<span class="hljs-attribute">line-height</span>: <span class="hljs-number">200px</span>;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<div id="box1">盒1</div>
+
+<h2 id="盒样式"><a href="#盒样式" class="headerlink" title="盒样式"></a>盒样式</h2><h3 id="居中"><a href="#居中" class="headerlink" title="居中"></a>居中</h3><p>当需要使盒居中时,可以通过margin:0 auto完成自动居中<br>此为块元素居中,align是块元素内的元素基于父元素居中</p>
+<ol>
+<li>可以直接给当前标签内嵌居中</li>
+<li>一般针对固定宽度的盒子,不设宽度则占满浏览器</li>
+</ol>
+<h1 id="进阶"><a href="#进阶" class="headerlink" title="进阶"></a>进阶</h1><h2 id="选择器"><a href="#选择器" class="headerlink" title="选择器"></a>选择器</h2><h3 id="后代选择器"><a href="#后代选择器" class="headerlink" title="后代选择器"></a>后代选择器</h3><p>根据HTML标签的嵌套关系,选择父元素后代中满足条件的元素</p>
+<div>选择器语法：<strong style="color: red;">选择器1 选择器2{CSS}</strong></div>
+找到选择器1标签的后代,找到满足选择器2样式的标签,设置样式,无视嵌套深度
+
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs CSS"><span class="hljs-selector-tag">div</span> <span class="hljs-selector-tag">p</span>&#123;<br>	<span class="hljs-attribute">color</span>: purple;<br>&#125;<br></code></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs HTML"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span><br>	<span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span><br>		<span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span><br>			<span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span><br>				<span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>此<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span><br>			<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span><br>		<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span><br>	<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span><br><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span><br></code></pre></td></tr></table></figure>
+<p>这也是有效的</p>
+<h3 id="自带选择器"><a href="#自带选择器" class="headerlink" title="自带选择器"></a>自带选择器</h3><p>根据HTML标签的嵌套关系,仅寻找一层嵌套关系</p>
+<div>选择器语法：<strong style="color: red;">选择器1>选择器2{CSS}</strong></div>
+
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs CSS"><span class="hljs-selector-tag">div</span>&gt;<span class="hljs-selector-tag">a</span>&#123;<br>	<span class="hljs-attribute">color</span>: darkred;<br>&#125;<br></code></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs HTML"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span><br>	<span class="hljs-tag">&lt;<span class="hljs-name">a</span>&gt;</span>div子代<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><br>		<span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span>&gt;</span>div中p的子代<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span><br><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span><br></code></pre></td></tr></table></figure>
+<p>此时运行,则div的p的子代不会变色,因为这是二层</p>
+<h3 id="并集选择器"><a href="#并集选择器" class="headerlink" title="并集选择器"></a>并集选择器</h3><p>其实就和普通选择器差不多</p>
+<div>选择器语法：<strong style="color: red;">选择器1,选择器2{CSS}</strong></div>
+通过逗号可以使得多种元素共用一个样式
+
+<h3 id="交集选择器"><a href="#交集选择器" class="headerlink" title="交集选择器"></a>交集选择器</h3><p>选中页面中同时满足多个选择器的标签</p>
+<div>选择器语法：<strong style="color: red;">选择器1.选择器2{CSS}</strong></div>
+找到页面中既能被选择器1选中,又能被选择器2选中的标签
+必须紧挨,中间没有其他东西
+如果交集选择器中有标签选择器,标签选择器必须写在最前方
+
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs CSS"><span class="hljs-selector-tag">div</span><span class="hljs-selector-class">.mine</span>&#123;<br>	<span class="hljs-attribute">color</span>: skyblue;<br>&#125;<br></code></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;mine&quot;</span>&gt;</span>p<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;mine&quot;</span>&gt;</span>div<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span><br></code></pre></td></tr></table></figure>
+<p>此处仅会令div变色,因为css要求div连着类mine</p>
+<h3 id="hover伪类选择器"><a href="#hover伪类选择器" class="headerlink" title="hover伪类选择器"></a>hover伪类选择器</h3><p>作用:选中鼠标<strong>悬停</strong>在元素上的状态设置样式</p>
+<div>选择器语法：<strong style="color: red;">选择器1:hover {CSS}</strong></div>
+
+<h3 id="emmet语法"><a href="#emmet语法" class="headerlink" title="emmet语法"></a>emmet语法</h3><p>通过简写语法快速生成代码,了解就好,类似于选择器的写法</p>
+<table>
+<thead>
+<tr>
+<th align="center">记忆</th>
+<th align="center">示例</th>
+<th align="center">效果</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">标签名</td>
+<td align="center">div</td>
+<td align="center">&lt;div&gt;&lt;div&gt;</td>
+</tr>
+<tr>
+<td align="center">类选择器</td>
+<td align="center">.red</td>
+<td align="center">&lt;div class&#x3D;”red”&gt; &lt;div&gt;</td>
+</tr>
+<tr>
+<td align="center">id选择器</td>
+<td align="center">#one</td>
+<td align="center">&lt;div id&#x3D;”one”&gt;&lt;div&gt;</td>
+</tr>
+<tr>
+<td align="center">交集选择器</td>
+<td align="center">p.red#one</td>
+<td align="center">&lt;p class&#x3D;”red” id&#x3D;”one”&gt;&lt;&#x2F;p&gt;</td>
+</tr>
+<tr>
+<td align="center">子代选择器</td>
+<td align="center">ul&gt;li</td>
+<td align="center">&lt;ul&gt;&lt;div&gt;&lt;&#x2F;li&gt;&lt;&#x2F;ul&gt;</td>
+</tr>
+<tr>
+<td align="center">内部文本</td>
+<td align="center">ul&gt;li(内容)</td>
+<td align="center">&lt;ul&gt;&lt;li&gt;内容&lt;&#x2F;li&gt;&lt;&#x2F;ul&gt;</td>
+</tr>
+<tr>
+<td align="center">列表嵌套</td>
+<td align="center">ul&gt;li*3</td>
+<td align="center">&lt;ul&gt;&lt;li&gt;&lt;li&gt;&lt;li&gt;&lt;&#x2F;li&gt;&lt;&#x2F;li&gt;&lt;&#x2F;li&gt;&lt;&#x2F;ul&gt;</td>
+</tr>
+</tbody></table>
+<h2 id="背景相关属性"><a href="#背景相关属性" class="headerlink" title="背景相关属性"></a>背景相关属性</h2><h3 id="背景颜色"><a href="#背景颜色" class="headerlink" title="背景颜色"></a>背景颜色</h3><div>属性名:<strong style="color: red;">background-color(bgc)</strong></div>
+属性值的颜色取值有:关键字,rgb表示法,rgba表示法,十六进制
+注意点:背景颜色值默认透明:rgba,transparent <br>
+背景颜色不会影响盒子大小,这使得可以看清盒子的大小和位置,一般布局中会先给盒子设置背景颜色
+
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs CSS"><span class="hljs-selector-tag">div</span>&#123;<br>	<span class="hljs-attribute">width</span>: <span class="hljs-number">40px</span>;<br>	<span class="hljs-attribute">height</span>: <span class="hljs-number">40px</span>;<br>	<span class="hljs-attribute">background-color</span>: skyblue;<br>&#125;<br></code></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;div1&quot;</span>&gt;</span>div<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span><br></code></pre></td></tr></table></figure>
+<div id="div1">div</div>
+
+<h3 id="背景图片"><a href="#背景图片" class="headerlink" title="背景图片"></a>背景图片</h3><div>属性名:<strong style="color: red;">background-image(bgi)</strong></div>
+属性值是background-image:url('图片路径');
+
+<p>背景图片中的url可以省略引号<br><br>背景图片默认在水平和垂直方向平铺<br><br>背景图片仅仅有装饰效果,类似于背景色,并不能改变盒子大小<br>,但是可以主动改变图片的属性<br> 暂不示例</p>
+<h3 id="背景平铺"><a href="#背景平铺" class="headerlink" title="背景平铺"></a>背景平铺</h3><div>属性名:<strong style="color: red;">background-repeat(bgr)</strong></div>
+
+<table>
+<thead>
+<tr>
+<th align="center">取值</th>
+<th align="center">效果</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">repeat</td>
+<td align="center">默认值,水平竖直都平铺</td>
+</tr>
+<tr>
+<td align="center">no-repeat-x</td>
+<td align="center">不水平平铺</td>
+</tr>
+<tr>
+<td align="center">no-repeat</td>
+<td align="center">不平铺</td>
+</tr>
+<tr>
+<td align="center">repeat-x</td>
+<td align="center">沿着水平方向x轴平铺</td>
+</tr>
+<tr>
+<td align="center">repeat-y</td>
+<td align="center">沿着垂直方向y轴平铺</td>
+</tr>
+</tbody></table>
+<h3 id="背景位置"><a href="#背景位置" class="headerlink" title="背景位置"></a>背景位置</h3><div>属性名:<strong style="color: red;">background-position(bgp)</strong></div>
+background-position: 水平方向位置 垂直方向位置
+属性值有两种
+
+<ul>
+<li>方位名词(最多只能表示9个位置)<ol>
+<li>水平方向:left,center,right</li>
+<li>垂直方向:top,center,bottom</li>
+</ol>
+</li>
+<li>数字+px(坐标)<ul>
+<li>坐标系<ol>
+<li>原点(0,0),盒子的左上角</li>
+<li>x轴水平向右</li>
+<li>y轴水平向下</li>
+</ol>
+</li>
+<li>操作: 将图片左上角与坐标点重合即可</li>
+</ul>
+</li>
+</ul>
+<p>方位名词取值和坐标取值可以混用,第一个值水平,第二个垂直</p>
+<h3 id="背景相关属性连写"><a href="#背景相关属性连写" class="headerlink" title="背景相关属性连写"></a>背景相关属性连写</h3><div>属性名:<strong style="color: red;">background(bg)</strong></div>
+
+<p>属性值:单个属性值的连写,空格隔开<br>书写顺序:<br><br>推荐使用:background:color image repeat position<br><br>按需省略,在PC端如果盒子大小和背景一样,可以直接写background:url()<br><br>要么单独的样式写在连写下面,要么写在连写里面</p>
+<h4 id="背景相关属性-1"><a href="#背景相关属性-1" class="headerlink" title="背景相关属性"></a>背景相关属性</h4><p>在网页中展示一张图片的效果:<br><br>方法1:直接写img标签,不设置框高默认原尺寸<br><br>方法2:div标签+背景图片<br><br>需要设置div的宽高,背景图片只是装饰的css样式,不能撑开图片</p>
+<h3 id="元素显示模式"><a href="#元素显示模式" class="headerlink" title="元素显示模式"></a>元素显示模式</h3><h4 id="块级元素"><a href="#块级元素" class="headerlink" title="块级元素"></a>块级元素</h4><p>特点:独占,宽度默认继承父元素(color属性设置默认整行),高度按内容撑开,可以设置宽高<br>代表标签:div,p,h,ul,li,dl,dt,dd,form,header,nav,footer</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs CSS"><span class="hljs-selector-tag">div</span><span class="hljs-selector-class">.h</span>&#123;<br>	<span class="hljs-attribute">color</span>: purple;<br>	<span class="hljs-attribute">background</span>: yellow;<br>&#125;<br></code></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs HTML"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;h&quot;</span>&gt;</span>大概是这样<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span><br></code></pre></td></tr></table></figure>
+<div class="h">大概是这样</div>
+
+<h4 id="行内元素"><a href="#行内元素" class="headerlink" title="行内元素"></a>行内元素</h4><p>特点:一行显示多个,宽度和高度默认由内容撑开(color仅延展到文字),不可设置宽高<br>代表标签:a,span,b,u,i,s,strong,ins,em,del</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs CSS"><span class="hljs-selector-tag">span</span><span class="hljs-selector-class">.h</span>&#123;<br>	<span class="hljs-attribute">color</span>: purple;<br>	<span class="hljs-attribute">background</span>: green;<br>&#125;<br></code></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs HTML"><span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;h&quot;</span>&gt;</span>大概是这样<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span><br></code></pre></td></tr></table></figure>
+<p><span class="h">大概是这样</span></p>
+<h4 id="行内块元素"><a href="#行内块元素" class="headerlink" title="行内块元素"></a>行内块元素</h4><p>特点:一行可以显示多个<br>可以设置宽高<br>代表标签:</p>
+<ul>
+<li>input,textarea,button,select…</li>
+<li>特殊情况:img标签有行内块元素特点,但是Chrome调试工具中显示结果为inline</li>
 </ul>
 
                 
