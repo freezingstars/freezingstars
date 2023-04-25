@@ -1,0 +1,746 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/fluid.png">
+  <link rel="icon" href="/img/fluid.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="冷星">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="挺忙的">
+<meta property="og:type" content="article">
+<meta property="og:title" content="网络基础知识">
+<meta property="og:url" content="http://example.com/2023/04/24/%E7%BD%91%E7%BB%9C%E5%9F%BA%E7%A1%80/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="挺忙的">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://example.com/img/%E7%BD%91%E7%BB%9C%E6%A8%A1%E5%9E%8B.jpg">
+<meta property="og:image" content="http://example.com/img/%E5%88%86%E5%B1%82%E7%BB%93%E6%9E%84.png">
+<meta property="article:published_time" content="2023-04-24T12:01:59.332Z">
+<meta property="article:modified_time" content="2023-04-25T05:24:08.967Z">
+<meta property="article:author" content="冷星">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="http://example.com/img/%E7%BD%91%E7%BB%9C%E6%A8%A1%E5%9E%8B.jpg">
+  
+  
+  
+  <title>网络基础知识 - Hexo</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_hj8rtnfg7um.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.9.4","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+
+  
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>首页</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>归档</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/img/default.png') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="网络基础知识"></span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2023-04-24 20:01" pubdate>
+          2023年4月24日 晚上
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          4.8k 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          40 分钟
+        
+      </span>
+    
+
+    
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">网络基础知识</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <p>挺忙的</p>
+<span id="more"></span>
+
+
+<style>
+    strong{
+        color: red;
+    }
+    #div1 {
+        display: inline-block;
+    }
+    #div1 p{
+        border-style: solid;border-color: black;background-color: darkorange;text-align: center;color: white;font-size: 8px;
+    }
+    a strong{
+        text-decoration: none;color: white;
+    }
+    rt{
+        color: white;
+    }
+</style>
+
+
+<h1 id="基础常识"><a href="#基础常识" class="headerlink" title="基础常识"></a>基础常识</h1><h2 id="发展史"><a href="#发展史" class="headerlink" title="发展史"></a>发展史</h2><p>网络实际是冷战的产物,是一种分散的指挥系统.最早叫做ARPANET(阿帕网).到1972年时,阿帕网上的网点数已经达到40个,可以相互传输小文本文件,也就是E-mail,也可以利用文件传输协议发送大文本文件,包括数据文件,即现在的FTP.<br>同时,也发现了将一台电脑模拟为另一台远程电脑的终端而使用远程电脑上资源的方法,被称为Telnet.由此可见,E-mail,FTP和Telnet是因特网上较早出现的重要工具,E-mail和FTP目前仍是因特网上最主要的内容.</p>
+<h2 id="通信协议"><a href="#通信协议" class="headerlink" title="通信协议"></a>通信协议</h2><p>1972年,为了在不同计算机网络之间进行通信达成协议,会议决定成立Internet工作组,负责建立一种<strong>能保证计算机之间进行通信的标准规范即”通信协议”</strong><br>1973年,美国国防部也开始研究如何实现各种不同网络之间的互联问题,到了1974年,IP(Internet协议)和TCP(传输控制协议)问世,合称<strong>TCP&#x2F;IP协议</strong><br>这两个协议定义了一种在电脑网络间传送报文(文件或命令的方法).随后,美国国防部决定向全世界无条件提供TCP&#x2F;IP协议,即向全世界公布了电脑网络之间通信的核心技术,TCP&#x2F;IP协议的公开导致了Internet的迅速发展</p>
+<p>到1980年,世界上既有使用TCP&#x2F;IP协议的ARPA网,也有很多使用其他通信协议的网络,为了连接这些网络,温顿·瑟夫提出了一个想法:在美国<strong>网络内部各自使用自己的通信协议,在和其他网络通信时使用TCP&#x2F;IP协议</strong>,使其利于厂商之间的公平竞争,不遵从则被剔除市场</p>
+<p>TCP&#x2F;IP 具有五层模型</p>
+<ol>
+<li>物理层;和数据链路层都是由底层网络定义的协议</li>
+<li><u>数据链路层</u> 	</li>
+<li><u>网络层</u> ICMP IGMP IP ARP RARP</li>
+<li><u>传输层</u> TCP UCP SCTP</li>
+<li><u>应用层</u> HTTP FTP TFTP SMTP SNMP DNS</li>
+</ol>
+<p>早期的计算机网络主要是为了解决价格昂贵,电脑数量极少而产生,其形式是将一台计算机经过通信线路与若干台终端直接连接,我们也可以将其看做最简单的<strong>局域网雏形</strong><br>最早的Internet是由美国国防部高级研究计划局建立,如今计算机网络的许多概念和方法,如分组交换技术都来自ARPAnet.不仅进行了租用线互联的分组交换技术研究,而且做了无线,卫星网的分组交换技术研究,其结果便是TCP&#x2F;IP的问世</p>
+<p>ARPAnet最大的贡献是<strong>TCP&#x2F;IP协议的问世</strong></p>
+<p>第一阶段:远程通信连接<br>第二阶段:局域网通信<br>第三阶段:计算机网络互联,同时TCP&#x2F;IP协议诞生并广泛使用<br>第四阶段:信息高速公路,实际就是现代网络</p>
+<p>中国网络从1987年开始通过中国学术网CANET向世界发出第一封E-mail为标志面世<br>第一阶段:87-93研究试验阶段,仅限于小范围内的电子邮件服务<br>第二阶段:94-96起步阶段,正式被承认为中国的互联网,同时96年网民已达到20W<br>第三阶段为97年到现在,是Internet在我国发展最为快速的阶段,截止03年,我国上网总人数到达6800W,比2002年增加了2220W人</p>
+<p>中国的网络域名正式确认为cn</p>
+<p>因特网是人类历史发展中的伟大里程碑,是未来信息高速公路的雏形,已经成为世界上覆盖面最广,规模最大,信息资源最丰富的计算机信息网络</p>
+<h1 id="正式认识计网"><a href="#正式认识计网" class="headerlink" title="正式认识计网"></a>正式认识计网</h1><h2 id="计算机网络概述"><a href="#计算机网络概述" class="headerlink" title="计算机网络概述"></a>计算机网络概述</h2><p>计算机网络:将分散的,具有独立功能的计算机系统通过通信设备与线路连接起来,由功能完善的软件实现资源共享和信息传递的系统<br>计算机网络是<strong>互联,自治</strong>的计算机集合<br>互联:通过通信链路互联互通<br>自治:无主从关系</p>
+<h3 id="计算机网络的功能"><a href="#计算机网络的功能" class="headerlink" title="计算机网络的功能"></a>计算机网络的功能</h3><ol>
+<li>数据通信:文件传输</li>
+<li>资源共享:同一个计算机网络上的其他计算机可使用某台计算机的资源,可共享<strong>硬件,软件,数据</strong></li>
+<li>分布式处理:多台计算机各自承担同一工作任务的不同部分<ol>
+<li>提高可靠性:分布式处理的衍生,单台下线后其他计算机可以继续完成任务</li>
+<li>负载均衡:任然是分布式处理的衍生<br>因特网的发展阶段:</li>
+</ol>
+</li>
+<li>ARPAnet→internet→Internet</li>
+<li>三层结构的因特网:主干,地区,本地</li>
+<li>三层结构的衍生,将控制权分散给公司.ISP:因特网服务提供者&#x2F;商</li>
+</ol>
+<h3 id="计算机网络的组成"><a href="#计算机网络的组成" class="headerlink" title="计算机网络的组成"></a>计算机网络的组成</h3><ol>
+<li>组成部分:<strong>硬件,软件,协议(一系列规则和约定的集合)</strong></li>
+<li>工作方式:<ol>
+<li>边缘部分:可以是大型计算机,也可以小型摄像头,是使用网络设备的总和,也是进程之间的通信<ul>
+<li>C&#x2F;S方式:client&#x2F;server,客户端与服务器之间的通信</li>
+<li>P2P方式:peer-to-peer,对等连接,服务者和客户端之间可以相互切换.实际就是允许客户机向另外一台客户机请求资源传输,可以随时切换服务端与客户端.</li>
+</ul>
+</li>
+<li>核心部分:核心部分为边缘部分服务,包括路由器,中间部分等</li>
+</ol>
+</li>
+<li>功能组成:<ol>
+<li>通信子网 实现数据通信</li>
+<li>资源子网 实现资源共享&#x2F;数据处理</li>
+</ol>
+</li>
+</ol>
+<img src="/img/网络模型.jpg" srcset="/img/loading.gif" lazyload>
+网络层:路由器等
+数据链路层:交换机,网桥
+物理层:集线器,中继器
+
+<p>按分布范围分:广域网WAN&amp;rt;城域网MAN&amp;rt;局域网LAN&amp;rt;个人区域网PAN&amp;rt;<br>按使用者分:公用网,专用网<br>按交换技术分:电路交换,报文交换,分组交换.<br>电路交换最经典的就是电话,当用户已经占用其中一条电路线时,其他用户无法使用(通话正忙).报文交换可以认为是分组的总和,可以统称为存储转发.存储转发通过路由器自动选择更快的方向进行传输,每个路由器都可以作为一个站点,仅占用一小段资源.<br>按拓扑结构分:总线型,星型,环形,网状型</p>
+<p>按传输技术分:广播式网络(共享公共信道),点对点网络(使用分组存储转发与路由选择机制)</p>
+<h3 id="标准化工作及其相关组织"><a href="#标准化工作及其相关组织" class="headerlink" title="标准化工作及其相关组织"></a>标准化工作及其相关组织</h3><p>要实现不同厂商的软,硬件相互连通,必须有一个统一的标准</p>
+<ul>
+<li>标准分类:<br>  1. 法定标准 		由权威机构制定的正式的,合法的标准 	<strong>OSI</strong><br>  2. 事实标准 		某些公司产品在竞争中为主流,这些产品的协议和技术成为了标准</li>
+</ul>
+<p>RFC(Request For Comments)————————————因特网标准的形式<br>RFC上升至因特网正式标准的四个阶段:</p>
+<ol>
+<li>因特网草案:此时还不是RFC文档</li>
+<li>建议标准:从这个阶段开始成为RFC文档(可以由他人进行补充修改)</li>
+<li>草案标准:给IETF,IAB审核(现已取消)</li>
+<li>因特网标准</li>
+</ol>
+<p>国际标准化组织ISO 			OSI参考模型,HDLC协议<br>国际电信联盟ITU				制定通信规则<br>国际电子电气工程师协会IEEE	学术机构,IEEE802,5G<br>Internet工程任务组IETF 		负责因特网相关标准的制定 形式:RFC+数字编号</p>
+<h3 id="性能指标"><a href="#性能指标" class="headerlink" title="性能指标"></a>性能指标</h3><h4 id="速率"><a href="#速率" class="headerlink" title="速率"></a>速率</h4><p>速率:数据率&#x2F;数据传输率&#x2F;比特(1&#x2F;0)<br>连接在计算机网络上的主机在数字信道上传送数据位数的速率<br>单位有b&#x2F;Kb&#x2F;Mb&#x2F;Gb&#x2F;Tb每秒 一般使用比特代替字节作为传输速度单位,速率的单位转换为10^3,存储容量则是1024</p>
+<h4 id="带宽"><a href="#带宽" class="headerlink" title="带宽"></a>带宽</h4><p>带宽:原本指某个信号具有的频带宽度,即最高频率与最低频率之差,单位是赫兹<br>计算机网络中,带宽用来表示网络的通信线路传送数据的能力,通常是指单位时间内从网络中的某点到另一点所能通过的<strong>“最高数据率”</strong>.单位是”比特每秒”,b&#x2F;s,kb&#x2F;s,Mb&#x2F;s,GB&#x2F;s<br>也可以认为是<strong>网络设备所支持的最高速度</strong><br>链路带宽&#x3D;1MB&#x2F;s 时<br>主机在1us(微秒)内可向链路发送1bit数据<br>链路以电磁波为载体,传播速率近光,但是传输过程中有损耗,所以1us可向前传播200m,可以认为每秒是2*10^8每秒<br>每一段距离内都有1比特的数据正在传输,一段时间内每个正在传输的比特都有其自己的动作</p>
+<p>链路带宽&#x3D;2MB&#x2F;s 时<br>仅仅只是数据传输量变多了,可以认为是每段标准距离内有了两个比特</p>
+<h4 id="吞吐量"><a href="#吞吐量" class="headerlink" title="吞吐量"></a>吞吐量</h4><p>吞吐量:表示在单位时间内通过某个网络(或信道,接口)的数据量.单位b&#x2F;s,kb&#x2F;s,Mb&#x2F;s等<br>吞吐量受网络的带宽或额定速率的限制<br>吞吐量指的是链路带宽与速率的最大公共值,如果链路带宽的传输速率为100MB&#x2F;s,但是服务器与交换机的传输速率仅有30MB&#x2F;s,则吞吐量为30MB&#x2F;s</p>
+<p><strong>宽带是传输率,带宽是频率范围</strong></p>
+<h4 id="时延"><a href="#时延" class="headerlink" title="时延"></a>时延</h4><p>时延:指数据(报文&#x2F;分组&#x2F;比特流)从网络(或链路)的一端传送到另一端所需的时间.也叫延迟或迟延,单位是s<br>时延包含了:发送时延,传播时延,排队时延,处理时延<br>发送时延:数据长度&#x2F;信道带宽(以最后一个bit离开主机为准)<br>传播时延:取决于电磁波传播速度与链路长度<br>排队时延:信道占用警告,此时在路由器的缓存区进行等待<br>处理时延:路由器对数据检错与终点查验</p>
+<h4 id="时延带宽积"><a href="#时延带宽积" class="headerlink" title="时延带宽积"></a>时延带宽积</h4><p><ruby>时延带宽积<rt>bit</rt></ruby>&#x3D; <ruby>传播时延<rt>s</rt></ruby> X <ruby>带宽<rt>b&#x2F;s</rt><ruby><br>时延带宽积又称为以比特为单位的链路长度,即<strong>“”</p>
+<h4 id="往返时延RTT"><a href="#往返时延RTT" class="headerlink" title="往返时延RTT"></a>往返时延RTT</h4><p>从发送方发送数据开始,到发送方受到接收方的确认为止(接收方收到后立刻发送确认),总共经历的时延<br>RTT越大,在收到确认之前可发送的数据越多<br>RTT包括:往返传播时延(传播*2)和末端处理时间</p>
+<h4 id="利用率"><a href="#利用率" class="headerlink" title="利用率"></a>利用率</h4><ol>
+<li>信道利用率(数据通过时间&#x2F;总时长)</li>
+<li>网络利用率(信道利用率加权平均值,利用率越高.时延越大)<br>网络利用率高后,信道占用率极大,速率变慢</li>
+</ol>
+<h2 id="体系结构-amp-参考模型"><a href="#体系结构-amp-参考模型" class="headerlink" title="体系结构&amp;参考模型"></a>体系结构&amp;参考模型</h2><h3 id="分层结构"><a href="#分层结构" class="headerlink" title="分层结构"></a>分层结构</h3><p>发送文件:</p>
+<ol>
+<li>发起通信的计算机必须将数据通信的通路进行激活</li>
+<li>要告诉网络如何识别目的主机</li>
+<li>发起通信的主机要查明目的主机是否开机,并与网络连接正常</li>
+<li>发起通信的主机需查明对方计算机中文件管理程序是否做好准备工作</li>
+<li>确保差错和意外能够解决</li>
+</ol>
+<p>如何分层:将最初的物件层层打包.打包前和解包后相同层数的实体被称为对等实体(每一层都是一个实体)<br>对等实体之间具有协议,非对等则无.相邻两层之间通过接口进行连接</p>
+<p>基本规则:</p>
+<ol>
+<li>各层之间相互独立,每层仅实现一种相对独立的功能</li>
+<li>每层之间界面自然清晰,易于理解,相互交流尽可能少</li>
+<li>结构上可分割开.每层采用最合适的技术来使用</li>
+<li>保持下层对上层的独立性,上层单项使用下层提供的服务.</li>
+<li>整个分层结构应该能促进标准化工作</li>
+</ol>
+<h3 id="正式认识分层结构"><a href="#正式认识分层结构" class="headerlink" title="正式认识分层结构"></a>正式认识分层结构</h3><ol>
+<li>实体:第n层中的活动元素称为n层实体.同一层的实体叫做对等实体</li>
+<li>协议:为进行网络中的对等实体数据交换而建立的规则,标准或约定,称为网络协议(水平,可参考网络模型图)<ul>
+<li>语法:规定传输数据的格式</li>
+<li>语义:规定所要完成的功能</li>
+<li>同步:规定各种操作的顺序</li>
+</ul>
+</li>
+<li>接口(访问服务点SAP):上层使用下层服务的入口</li>
+<li>下层为相邻上层提供的功能调用(垂直)</li>
+</ol>
+<p>每一层都可以拆出SDU,PCI,PDU<br>SDU:服务数据单元,为完成用户所要求的功能而传输的数据<br>PCI:协议控制信息:控制协议操作的信息<br>PDU:对等层次之间传送的数据单位</p>
+<p>PCI+SDU&#x3D;PDU<br>PDU可以作为下一层的SDU<br>原数据+PCI&#x3D;PDU<br>PDU在上一层的基础上再加上PCI就成为一个全新的PDU,在本层PDU此时叫做SDU<br><img src="/img/分层结构.png" srcset="/img/loading.gif" lazyload></p>
+<p>网络体系结构是从<strong>功能</strong>上描述计算机网络结构<br>计算机网络体系结构简称网络体系结构是<strong>分层结构</strong><br>每层遵循某个&#x2F;些<strong>网络协议</strong>以完成本层功能<br><strong>计算机网络体系结构</strong>是计算机网络的各层及其协议的集合<br>第n层在向n+1层提供服务时,此服务不仅包含第n层本身的功能,还包含由下层服务提供的功能<br>仅仅在<strong>相邻层间有接口</strong>,且所提供服务的具体实现细节对上一层完全屏蔽<br>体系结构是<strong>抽象</strong>的,而实现是指能运行的一些软件和硬件</p>
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>网络基础知识</div>
+      <div>http://example.com/2023/04/24/网络基础/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>冷星</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2023年4月24日</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2023/03/28/Java/" title="Java学习">
+                        <span class="hidden-mobile">Java学习</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.0/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.18.2/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/4.3.1/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>

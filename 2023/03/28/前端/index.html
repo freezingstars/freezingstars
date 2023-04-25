@@ -23,10 +23,12 @@
 <meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="#box1{     width: 100px;     height: 150px;     background-color: yellow;     text-align: center;     line-height: 200px;     }     #div1{         width:40px;         height: 40px;         backg">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://example.com/img/%E7%8C%AB%E7%8C%AB%E7%A5%AD%E6%8B%9C.png">
 <meta property="article:published_time" content="2023-03-27T16:15:15.385Z">
-<meta property="article:modified_time" content="2023-04-12T13:10:16.045Z">
+<meta property="article:modified_time" content="2023-04-25T00:49:36.955Z">
 <meta property="article:author" content="冷星">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="http://example.com/img/%E7%8C%AB%E7%8C%AB%E7%A5%AD%E6%8B%9C.png">
   
   
   
@@ -219,7 +221,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          16k 字
+          17k 字
         
       </span>
     
@@ -230,7 +232,7 @@
         
         
         
-          130 分钟
+          146 分钟
         
       </span>
     
@@ -669,6 +671,9 @@
     </tr>
 </table>
 
+<h3 id="表格边框合并"><a href="#表格边框合并" class="headerlink" title="表格边框合并"></a>表格边框合并</h3><p>在CSS中添加border-collapse:collapse;<br>之后表格便会将单元格合并<br>例如:</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">table</span> <span class="hljs-attr">style</span>=<span class="hljs-string">&quot;border-collapse: separate;&quot;</span>&gt;</span><br>	<span class="hljs-tag">&lt;<span class="hljs-name">caption</span>&gt;</span>普通<span class="hljs-tag">&lt;/<span class="hljs-name">caption</span>&gt;</span><br>	<span class="hljs-tag">&lt;<span class="hljs-name">tr</span>&gt;</span><br>		<span class="hljs-tag">&lt;<span class="hljs-name">th</span>&gt;</span>示例<span class="hljs-tag">&lt;/<span class="hljs-name">th</span>&gt;</span><br>		<span class="hljs-tag">&lt;<span class="hljs-name">th</span>&gt;</span>示例<span class="hljs-tag">&lt;/<span class="hljs-name">th</span>&gt;</span><br>	<span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span><br>	<span class="hljs-tag">&lt;<span class="hljs-name">tr</span>&gt;</span><br>		<span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span>占位<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span><br>		<span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span>占位<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span><br>	<span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span><br><span class="hljs-tag">&lt;/<span class="hljs-name">table</span>&gt;</span><br><br><span class="hljs-tag">&lt;<span class="hljs-name">table</span> <span class="hljs-attr">style</span>=<span class="hljs-string">&quot;border-collapse: collapse;&quot;</span>&gt;</span><br>	<span class="hljs-tag">&lt;<span class="hljs-name">caption</span>&gt;</span>合并<span class="hljs-tag">&lt;/<span class="hljs-name">caption</span>&gt;</span><br>	<span class="hljs-tag">&lt;<span class="hljs-name">tr</span>&gt;</span><br>		<span class="hljs-tag">&lt;<span class="hljs-name">th</span>&gt;</span>示例<span class="hljs-tag">&lt;/<span class="hljs-name">th</span>&gt;</span><br>		<span class="hljs-tag">&lt;<span class="hljs-name">th</span>&gt;</span>示例<span class="hljs-tag">&lt;/<span class="hljs-name">th</span>&gt;</span><br>	<span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span><br>	<span class="hljs-tag">&lt;<span class="hljs-name">tr</span>&gt;</span><br>		<span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span>占位<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span><br>		<span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span>占位<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span><br>	<span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span><br><span class="hljs-tag">&lt;/<span class="hljs-name">table</span>&gt;</span><br></code></pre></td></tr></table></figure>
+
 <h2 id="表单标签"><a href="#表单标签" class="headerlink" title="表单标签"></a>表单标签</h2><h3 id="input"><a href="#input" class="headerlink" title="input"></a>input</h3><p>可供收集信息的框<br>可以根据type属性值的不同展现不同的效果</p>
 <table>
 <thead>
@@ -720,10 +725,12 @@
 </tr>
 </tbody></table>
 <p>radio的属性并没有真正实现单选,还需要加name属性,可以对其进行分组,同一组中仅能选择一个值.checked属性可以默认选中<br>file的属性可以加入multiple属性进行多文件选择,不加为单选<br>按钮的具体功能需要配合from标签,如果提交与重置按钮想要使用,需要提供一个父级标签form<br>按钮(button)默认是没有文字的,用户也不知道有什么用,需要一个value标签增加文字</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs HTML"><span class="hljs-tag">&lt;<span class="hljs-name">form</span> <span class="hljs-attr">action</span>=<span class="hljs-string">&quot;&quot;</span>&gt;</span><br>文本框:<span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;text&quot;</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">&quot;输入文本就好&quot;</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">br</span>&gt;</span><br>密码框:<span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;password&quot;</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">&quot;输入密码&quot;</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">br</span>&gt;</span> <span class="hljs-comment">&lt;!--自带加密--&gt;</span><br>单选框:<span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;radio&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;gender&quot;</span> <span class="hljs-attr">checked</span>&gt;</span>男<span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;radio&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;gender&quot;</span>&gt;</span>女<span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;radio&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;gender&quot;</span>&gt;</span>未知<span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;radio&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;gender&quot;</span>&gt;</span>武装直升机<span class="hljs-tag">&lt;<span class="hljs-name">br</span>&gt;</span><br>多选框:<span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;checkbox&quot;</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">br</span>&gt;</span><br>文件上传:<span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;file&quot;</span> <span class="hljs-attr">multiple</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">br</span>&gt;</span><br>提交按钮:<span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;submit&quot;</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">br</span>&gt;</span><br>重置按钮:<span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;reset&quot;</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">br</span>&gt;</span><br><span class="hljs-tag">&lt;/<span class="hljs-name">form</span>&gt;</span><br>按钮<span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;button&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;点此鼠标寿命-1&quot;</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">br</span>&gt;</span><br>还是按钮:<span class="hljs-tag">&lt;<span class="hljs-name">button</span>&gt;</span>没什么用<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span><br></code></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><code class="hljs HTML"><span class="hljs-tag">&lt;<span class="hljs-name">form</span> <span class="hljs-attr">action</span>=<span class="hljs-string">&quot;&quot;</span>&gt;</span><br>文本框:<span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;text&quot;</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">&quot;输入文本就好&quot;</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">br</span>&gt;</span><br>密码框:<span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;password&quot;</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">&quot;输入密码&quot;</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">br</span>&gt;</span> <span class="hljs-comment">&lt;!--自带加密--&gt;</span><br>邮箱:<span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;email&quot;</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">br</span>&gt;</span><br>电话:<span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;tel&quot;</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">br</span>&gt;</span><br>单选框:<span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;radio&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;gender&quot;</span> <span class="hljs-attr">checked</span>&gt;</span>男<span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;radio&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;gender&quot;</span>&gt;</span>女<span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;radio&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;gender&quot;</span>&gt;</span>未知<span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;radio&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;gender&quot;</span>&gt;</span>武装直升机<span class="hljs-tag">&lt;<span class="hljs-name">br</span>&gt;</span><br>多选框:<span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;checkbox&quot;</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">br</span>&gt;</span><br>文件上传:<span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;file&quot;</span> <span class="hljs-attr">multiple</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">br</span>&gt;</span><br>提交按钮:<span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;submit&quot;</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">br</span>&gt;</span><br>重置按钮:<span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;reset&quot;</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">br</span>&gt;</span><br><span class="hljs-tag">&lt;/<span class="hljs-name">form</span>&gt;</span><br>按钮<span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;button&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;点此鼠标寿命-1&quot;</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">br</span>&gt;</span><br>还是按钮:<span class="hljs-tag">&lt;<span class="hljs-name">button</span>&gt;</span>没什么用<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span><br></code></pre></td></tr></table></figure>
 <form action="">
 文本框:<input type="text" placeholder="输入文本就好"><br>
 密码框:<input type="password" placeholder="输入密码"><br> <!--自带加密-->
+邮箱:<input type="email"><br>
+电话:<input type="tel"><br>
 单选框:<input type="radio" name="gender" checked>男<input type="radio" name="gender">女<input type="radio" name="gender">未知<input type="radio" name="gender">武装直升机<br>
 多选框:<input type="checkbox"><br>
 文件上传:<input type="file" multiple><br>
@@ -734,6 +741,13 @@
 还是按钮:<button>没什么用</button>
 
 <p>button按钮也可以加入很多标签和功能,也可以&lt;button type&#x3D;”submit”&gt; &lt;&#x2F;button&gt;,这样就得到了一个带有提交功能的按钮</p>
+<h4 id="表单时间"><a href="#表单时间" class="headerlink" title="表单时间"></a>表单时间</h4><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>年月日：<span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;date&quot;</span> /&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>年月：<span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;month&quot;</span> /&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>年周：<span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;week&quot;</span> /&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>时间：<span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;time&quot;</span> /&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span><br></code></pre></td></tr></table></figure>
+
+<p>年月日：<input type="date" /></p>
+<p>年月：<input type="month" /></p>
+<p>年周：<input type="week" /></p>
+<p>时间：<input type="time" /></p>
+
 <h3 id="select下拉菜单标签"><a href="#select下拉菜单标签" class="headerlink" title="select下拉菜单标签"></a>select下拉菜单标签</h3><p>提供多个选择项的下拉菜单表单控件<br>select:下拉菜单的整体<br>option:下拉菜单的每一项<br>属性:selected(默认选中)</p>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs HTML"><span class="hljs-tag">&lt;<span class="hljs-name">select</span>&gt;</span><br>	<span class="hljs-tag">&lt;<span class="hljs-name">option</span>&gt;</span>周一<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span><br>	<span class="hljs-tag">&lt;<span class="hljs-name">option</span>&gt;</span>周二<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span><br>	<span class="hljs-tag">&lt;<span class="hljs-name">option</span>&gt;</span>周三<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span><br>	<span class="hljs-tag">&lt;<span class="hljs-name">option</span>&gt;</span>周四<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span><br>	<span class="hljs-tag">&lt;<span class="hljs-name">option</span>&gt;</span>周五<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span><br>	<span class="hljs-tag">&lt;<span class="hljs-name">option</span>&gt;</span>周六<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span><br>	<span class="hljs-tag">&lt;<span class="hljs-name">option</span> <span class="hljs-attr">selected</span>&gt;</span>周日<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span> <span class="hljs-comment">&lt;!--默认选中--&gt;</span><br><span class="hljs-tag">&lt;/<span class="hljs-name">select</span>&gt;</span><br></code></pre></td></tr></table></figure>
 <select>
@@ -749,13 +763,25 @@
 <h3 id="textarea文本域标签"><a href="#textarea文本域标签" class="headerlink" title="textarea文本域标签"></a>textarea文本域标签</h3><p>在网页中提供可输入多行文本的表单控件<br>标签名:textarea<br>常见属性:</p>
 <ul>
 <li>cols:规定了文本域内可见行数</li>
-<li>rows:规定了文本域的宽度<br>注意事项:右下角可以<strong>拖拽改变大小</strong>,实际建议配合css使用<br><label for="story">Tell us your story:</label></li>
+<li>rows:规定了文本域的宽度<br>注意事项:右下角可以<strong>拖拽改变大小</strong>,实际建议配合css使用</li>
 </ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">&quot;story&quot;</span>&gt;</span>Tell us your story:<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span><br><br><span class="hljs-tag">&lt;<span class="hljs-name">textarea</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;story&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;story&quot;</span></span><br><span class="hljs-tag">          <span class="hljs-attr">rows</span>=<span class="hljs-string">&quot;5&quot;</span> <span class="hljs-attr">cols</span>=<span class="hljs-string">&quot;33&quot;</span>&gt;</span><br>It was a dark and stormy night...<br>也许还有人记得史努比?<br><span class="hljs-tag">&lt;/<span class="hljs-name">textarea</span>&gt;</span><br></code></pre></td></tr></table></figure>
+
+<p><label for="story">Tell us your story:</label></p>
 <textarea id="story" name="story"
           rows="5" cols="33">
 It was a dark and stormy night...
 也许还有人记得史努比?
 </textarea>
+
+
+<h3 id="数据联想表单"><a href="#数据联想表单" class="headerlink" title="数据联想表单"></a>数据联想表单</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">datalist</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;list_name&quot;</span>&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">option</span>&gt;</span>选项1<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">option</span>&gt;</span>选项2<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">option</span>&gt;</span>选项3<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span><br><span class="hljs-tag">&lt;/<span class="hljs-name">datalist</span>&gt;</span><br></code></pre></td></tr></table></figure>
+
+<datalist id="list_name">
+<option>选项1</option>
+<option>选项2</option>
+<option>选项3</option>
+</datalist>
 
 <h3 id="label标签"><a href="#label标签" class="headerlink" title="label标签"></a>label标签</h3><p>用于绑定内容和表单标签的关系<br>标签名label<br>使用方法①:</p>
 <ol>
@@ -1103,8 +1129,8 @@ It was a dark and stormy night...
 <li>文本</li>
 <li>span标签、a标签</li>
 <li>input、img标签<br>注意点：</li>
-<li>如果需要让以上元素水平居中，需要给以上元素的父元素设置<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs HTML"><span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">sec</span>=<span class="hljs-string">&quot;路径&quot;</span>&gt;</span><br></code></pre></td></tr></table></figure>
-<img sec="/img/猫猫祭拜.png" alt="cat" title="超智慧生物(误)"></li>
+<li>如果需要让以上元素水平居中，需要给以上元素的父元素设置<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs HTML"><span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;路径&quot;</span>&gt;</span><br></code></pre></td></tr></table></figure>
+<img src="/img/猫猫祭拜.png" srcset="/img/loading.gif" lazyload alt="cat" title="超智慧生物(误)"></li>
 </ol>
 <h5 id="文本修饰"><a href="#文本修饰" class="headerlink" title="文本修饰"></a>文本修饰</h5><div>属性名：<strong style="color: red;">text-decoration</strong></div>
 取值：
@@ -1328,6 +1354,47 @@ background-position: 水平方向位置 垂直方向位置
 <li>input,textarea,button,select…</li>
 <li>特殊情况:img标签有行内块元素特点,但是Chrome调试工具中显示结果为inline</li>
 </ul>
+<table>
+<thead>
+<tr>
+<th align="center">元素模式</th>
+<th align="center">元素排列</th>
+<th align="center">设置样式</th>
+<th align="center">默认宽度</th>
+<th align="center">包含</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">块级元素</td>
+<td align="center">一行只能放一个块级元素</td>
+<td align="center">可以设置宽度高度</td>
+<td align="center">容器的100%</td>
+<td align="center">容器级可以包含任何标签</td>
+</tr>
+<tr>
+<td align="center">行内元素</td>
+<td align="center">一行可以放多个行内元素</td>
+<td align="center">不可以直接设置宽度高度</td>
+<td align="center">它本身内容的宽度</td>
+<td align="center">容纳文本或者其他行内元素</td>
+</tr>
+<tr>
+<td align="center">行内块元素</td>
+<td align="center">一行放多个行内块元素</td>
+<td align="center">可以设置宽度高度</td>
+<td align="center">它本身内容的宽度</td>
+<td align="center"></td>
+</tr>
+</tbody></table>
+<h4 id="CSS的元素显示模式"><a href="#CSS的元素显示模式" class="headerlink" title="CSS的元素显示模式"></a>CSS的元素显示模式</h4><p>特殊情况下需要元素模式的转换,一个模式的元素需要另外一种模式的特性<br>比如想要增加链接&lt;&gt;的触发范围<br>转为块元素:display:block;<br>行内元素:display:inline;<br>行内块元素:display:inline-block;<br>将行内元素a转换为块元素:</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs CSS"><span class="hljs-selector-tag">a</span>&#123;<br>	<span class="hljs-attribute">width</span>: <span class="hljs-number">40px</span>;<br>	<span class="hljs-attribute">height</span>: <span class="hljs-number">40px</span>;<br>	<span class="hljs-attribute">display</span>: block;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<h3 id="snipaste的使用"><a href="#snipaste的使用" class="headerlink" title="snipaste的使用"></a>snipaste的使用</h3><p>一个截图工具,可以让你将截图贴回屏幕上<br>alt取色,shift切换取色模式<br>F1截图,同时测量大小,设置箭头,书写文字等</p>
+<h3 id="单行文字垂直居中"><a href="#单行文字垂直居中" class="headerlink" title="单行文字垂直居中"></a>单行文字垂直居中</h3><p>CSS并未提供文字垂直居中的代码,可以使用其他方法实现<br>解决方案:让文字的行高等同于盒子高度,即可让文字在当前盒内垂直居中</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs CSS"><span class="hljs-attribute">line-height</span>= <span class="hljs-number">40px</span>;<br><span class="hljs-attribute">height</span> = <span class="hljs-number">40px</span>;<br></code></pre></td></tr></table></figure>
+<p>实际为将文字挤在中间</p>
+<h2 id="CSS的背景"><a href="#CSS的背景" class="headerlink" title="CSS的背景"></a>CSS的背景</h2><p color="red"><strong>background-color</strong>属性定义了元素的背景颜色</p>
+
 
                 
               </div>
