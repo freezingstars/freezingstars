@@ -23,10 +23,12 @@
 <meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="Java常识类长期支持版本(LTS ):JDK8、JDK11、JDK17JavaSE:标准版，用于桌面应用的开发，是其他两个版本的基础.JavaME:Java语言的标准版，用于嵌入式电子设备(电视机,照相机等)或小型移动设备.JavaEE:Java语言的企业版,用于web方向的网页开发.Java能做什么:桌面应用开发工具:各种税务管理软件 IDEA Clion Pycharm.企业级应用开发:微">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://example.com/2023/03/28/Java/%E6%88%90%E5%91%98%E6%96%B9%E6%B3%95.png">
 <meta property="article:published_time" content="2023-03-27T16:15:22.810Z">
-<meta property="article:modified_time" content="2023-04-24T12:01:46.992Z">
+<meta property="article:modified_time" content="2023-04-28T05:53:12.619Z">
 <meta property="article:author" content="冷星">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="http://example.com/2023/03/28/Java/%E6%88%90%E5%91%98%E6%96%B9%E6%B3%95.png">
   
   
   
@@ -219,7 +221,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          42k 字
+          43k 字
         
       </span>
     
@@ -230,7 +232,7 @@
         
         
         
-          352 分钟
+          363 分钟
         
       </span>
     
@@ -710,6 +712,52 @@
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><code class="hljs Java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">PD</span> &#123;<br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">main</span><span class="hljs-params">(String[] args)</span> &#123;<br>        <span class="hljs-type">Scanner</span> <span class="hljs-variable">sc</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">Scanner</span>(System.in);<br>        System.out.println(<span class="hljs-string">&quot;输入字符串&quot;</span>);<br>        <span class="hljs-type">String</span> <span class="hljs-variable">input</span> <span class="hljs-operator">=</span> sc.next();<br>        <span class="hljs-type">String</span> <span class="hljs-variable">put</span> <span class="hljs-operator">=</span> <span class="hljs-string">&quot;&#123;&quot;</span>;<br>        <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> <span class="hljs-variable">i</span> <span class="hljs-operator">=</span> <span class="hljs-number">0</span>; i &lt; input.length(); i++) &#123;<br>            <span class="hljs-type">char</span> <span class="hljs-variable">c</span> <span class="hljs-operator">=</span> input.charAt(i);<br>            <span class="hljs-keyword">if</span> (i==input.length()-<span class="hljs-number">1</span>)&#123;<br>                put += c+<span class="hljs-string">&quot;&#125;&quot;</span>;<br>                <span class="hljs-keyword">break</span>;<br>            &#125;<br>            put += c+<span class="hljs-string">&quot;,&quot;</span>;<br>        &#125;<br>        System.out.println(put);<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
 <p>字符串反转</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><code class="hljs Java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">PD</span> &#123;<br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">main</span><span class="hljs-params">(String[] args)</span> &#123;<br>        <span class="hljs-type">Scanner</span> <span class="hljs-variable">sc</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">Scanner</span>(System.in);<br>        System.out.println(<span class="hljs-string">&quot;输入字符串&quot;</span>);<br>        <span class="hljs-type">String</span> <span class="hljs-variable">input</span> <span class="hljs-operator">=</span> sc.next();<br>        System.out.println(reverser(input));<br>    &#125;<br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> String <span class="hljs-title function_">reverser</span><span class="hljs-params">(String a)</span>&#123;<br>        <span class="hljs-type">String</span> <span class="hljs-variable">re</span> <span class="hljs-operator">=</span> <span class="hljs-string">&quot;&quot;</span>;<br>        <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> <span class="hljs-variable">i</span> <span class="hljs-operator">=</span> <span class="hljs-number">0</span>; i &lt; a.length(); i++) &#123;<br>            <span class="hljs-type">char</span> <span class="hljs-variable">r</span> <span class="hljs-operator">=</span> a.charAt(a.length()-i-<span class="hljs-number">1</span>);<br>            re += r;<br>        &#125;<br>        <span class="hljs-keyword">return</span> re;<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<h2 id="StringJoiner"><a href="#StringJoiner" class="headerlink" title="StringJoiner"></a>StringJoiner</h2><p>和StringBuilder一样,也可以看做一个容器,创建之后内容是可变的<br>StringJoiner的构造方法:</p>
+<table>
+<thead>
+<tr>
+<th align="center">方法名</th>
+<th align="center">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">public StringJoiner(间隔符号)</td>
+<td align="center">创建一个StringJoiner对象,指定拼接时的间隔符号</td>
+</tr>
+<tr>
+<td align="center">public StringJoiner(间隔符号,开始符号,结束符号)</td>
+<td align="center">创建一个StringJoiner对象,指定拼接时的间隔符号,开始符号,结束符号</td>
+</tr>
+</tbody></table>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-type">StringJoiner</span> <span class="hljs-variable">sj</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">StringJoiner</span>(<span class="hljs-string">&quot;---&quot;</span>);<br><span class="hljs-type">StringJoiner</span> <span class="hljs-variable">sj</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">StringJoiner</span>(<span class="hljs-string">&quot;,&quot;</span>,<span class="hljs-string">&quot;[&quot;</span>,<span class="hljs-string">&quot;]&quot;</span>);<br></code></pre></td></tr></table></figure>
+<h3 id="StringJoiner的成员方法"><a href="#StringJoiner的成员方法" class="headerlink" title="StringJoiner的成员方法"></a>StringJoiner的成员方法</h3><table>
+<thead>
+<tr>
+<th align="center">方法名</th>
+<th align="center">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">public StringJoiner add (添加的内容)</td>
+<td align="center">添加数据,并返回对象本身</td>
+</tr>
+<tr>
+<td align="center">public int length()</td>
+<td align="center">返回长度(字符出现的个数)</td>
+</tr>
+<tr>
+<td align="center">public String toString</td>
+<td align="center">返回一个字符串(该字符串就是拼接之后的结果)</td>
+</tr>
+</tbody></table>
+<h3 id="实际使用"><a href="#实际使用" class="headerlink" title="实际使用"></a>实际使用</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs Java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">main</span><span class="hljs-params">(String[] args)</span> &#123;<br>       <span class="hljs-type">StringJoiner</span> <span class="hljs-variable">sj</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">StringJoiner</span>(<span class="hljs-string">&quot;---&quot;</span>);<br>       <span class="hljs-comment">//创建一个对象,并指定中间的间隔符号</span><br>       sj.add(<span class="hljs-string">&quot;aaa&quot;</span>).add(<span class="hljs-string">&quot;bbb&quot;</span>).add(<span class="hljs-string">&quot;ccc&quot;</span>);<br>       System.out.println(sj); <span class="hljs-comment">//输出为aaa---bbb---ccc</span><br>   &#125;<br></code></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs Java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">main</span><span class="hljs-params">(String[] args)</span>&#123;<br>    <span class="hljs-type">StringJoiner</span> <span class="hljs-variable">sj</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">StringJoiner</span>(<span class="hljs-string">&quot;,&quot;</span>,<span class="hljs-string">&quot;[&quot;</span>,<span class="hljs-string">&quot;]&quot;</span>);<br>    <span class="hljs-comment">//StringJoiner(&quot;间隔符号&quot;,&quot;起始符号&quot;,&quot;结束符号&quot;);</span><br>        sj.add(<span class="hljs-string">&quot;aaa&quot;</span>).add(<span class="hljs-string">&quot;bbb&quot;</span>).add(<span class="hljs-string">&quot;ccc&quot;</span>);<br>        System.out.println(sj); <span class="hljs-comment">//输出为[aaa,bbb,ccc]</span><br>&#125;<br></code></pre></td></tr></table></figure>
+<h1 id="集合"><a href="#集合" class="headerlink" title="集合"></a>集合</h1><p>集合可以简单认为是自动扩容的数组,但集合仅能存放引用数据类型和包装类</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs Java">ArrayList&lt;string&gt; list = <span class="hljs-keyword">new</span> <span class="hljs-title class_">Arraylist</span>&lt;String&gt;();<br>ArrayList&lt;string&gt; list1 = <span class="hljs-keyword">new</span> <span class="hljs-title class_">Arraylist</span>&lt;&gt;();<br>System.out.println(list1);  <span class="hljs-comment">//输出为[],就是空,打印时会将所有的数据进行包装</span><br></code></pre></td></tr></table></figure>
+<p>ArrayList是一个已经写好的类,这个类在底层做了一些处理<br>打印对象不是地址值,而是集合中存储的数据内容,在展示的时候会以[]将所有的数据进行包装<br><img src="./成员方法.png" srcset="/img/loading.gif" lazyload></p>
+<p>接口中既可以有抽象也可以有非抽象,方法不能有方法体</p>
+
                 
               </div>
             
