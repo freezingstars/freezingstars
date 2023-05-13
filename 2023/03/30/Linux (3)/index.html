@@ -1,0 +1,1027 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/fluid.png">
+  <link rel="icon" href="/img/fluid.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="冷星">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="之后会合并,忙  .bashrc 这个文件可以自定短命令,且开机会自动执行其中的命令,处于用户的home目录下用此可以在开机时自定短命令alias ll &#x3D; “ls -lha”不要alias cd &#x3D; “rm -f &#x2F;“echo $? 检测上一条命令是否报错,0为正确输出 Linux命令命令名 可选项 参数ls 		参数，选项 展示当前目录文件 a全 l列表和文件信息">
+<meta property="og:type" content="article">
+<meta property="og:title" content="一个临时的Linux笔记">
+<meta property="og:url" content="http://example.com/2023/03/30/Linux%20(3)/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="之后会合并,忙  .bashrc 这个文件可以自定短命令,且开机会自动执行其中的命令,处于用户的home目录下用此可以在开机时自定短命令alias ll &#x3D; “ls -lha”不要alias cd &#x3D; “rm -f &#x2F;“echo $? 检测上一条命令是否报错,0为正确输出 Linux命令命令名 可选项 参数ls 		参数，选项 展示当前目录文件 a全 l列表和文件信息">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2023-03-30T12:02:10.873Z">
+<meta property="article:modified_time" content="2023-05-07T11:54:08.094Z">
+<meta property="article:author" content="冷星">
+<meta name="twitter:card" content="summary_large_image">
+  
+  
+  
+  <title>一个临时的Linux笔记 - Hexo</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_hj8rtnfg7um.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.9.4","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+
+  
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>首页</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>归档</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/img/default.png') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="一个临时的Linux笔记"></span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2023-03-30 20:02" pubdate>
+          2023年3月30日 晚上
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          42k 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          349 分钟
+        
+      </span>
+    
+
+    
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">一个临时的Linux笔记</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <p>之后会合并,忙</p>
+<hr>
+<p>.bashrc 这个文件可以自定短命令,且开机会自动执行其中的命令,处于用户的home目录下<br>用此可以在开机时自定短命令alias ll &#x3D; “ls -lha”<br>不要alias cd &#x3D; “rm -f &#x2F;“<br>echo $? 检测上一条命令是否报错,0为正确输出</p>
+<h1 id="Linux命令"><a href="#Linux命令" class="headerlink" title="Linux命令"></a>Linux命令</h1><p>命令名 可选项 参数<br>ls 		参数，选项 展示当前目录文件 a全 l列表和文件信息，蓝色为文件夹 h切换格式显示大小<br>cd 		参数 切工作目录，仅cd回到home目录<br>pwd		打印工作目录<br>mkdir	选项，参数 创建新的目录,-p自动创建不存在的父目录，使用与创建连续多层级的目录体系，需要权限，一般仅在home内操作<br>clean	等同于ctrl+l，清屏<br>touch 	参数 创建文件，该命令无选项，参数必填，表示文件名<br>cat		参数 查看文件内容，后跟路径<br>more	参数 查看文件内容，支持翻页，文件内容过多时可以一页页展示，空格翻页，q退出<br>cp		选项，参数 具有两个参数，被复制文件路径与目标路径，复制文件夹时需要-r，可以具有改名的效果<br>mv		参数 两个参数，起点与终点，具有改名效果<br>rm		选项，参数 可以有多个参数，-r删除文件夹，-f强制删除，只有管理员用户删除内容会有提示。删除多个内容时使用空格隔开每一项参数，支持通配符<em>，test</em>表示以test开头的内容，<em>test表示以test结尾的内容，</em>test*表示匹配任何包含test的内容<br>su		选项 -root临时获取root权限，exit退出<br>which	参数 后跟具体命令，可以查看该命令的本体存放位置<br>find	参数，选项 可以根据文件名&#x2F;文件大小查找文件 参数写名字或大小 +1G表示大于1G -100M表示小于100MB 可以使用通配符<br>find	起始路径 -name&#x2F;size “参数”<br>grep	从文件中通过关键字过滤文件行 -n可选，表示显示匹配的行的行号<br>grep 	选项 关键字 文件路径(可作为管道符的输入结果)<br>wc      统计文件行数和单词数量，-c统计bytes(字节占用)数量，-m字符数量，-l行数，-w单词数量<br>wc 		选项 文件路径<br>|		管道符号，将左边命令的输出(要有输出)作为右边命令的输入（参数）<br>cat 文件 | wc -l 统计cat文件输出的内容中的行数<br>echo	输出后面跟随的内容，建议使用双引号包裹，被&#96;&#96;包含的内容会作为命令执行</p>
+<blockquote>
+<p>和&gt;&gt; 	分别为覆写与追加。左侧的命令结果会被覆写&#x2F;追加到右边的文件内<br>tail	查看文件尾部的内容，追踪文件的最新更改。-f持续追踪，-num查看尾部多少行，不加默认10<br>tail 选项 Linux路径<br>vim		vi的加强版，兼容vi所有指令，具有shell程序编辑的功能，可以代码高亮辨别语法的正确性 有命令模式(所有输入都被理解为命令，作为输入和底线的中转站，按ESC进入)，输入模式(i o a)，底线命令模式(：) 当目标文件不存在时，创建新文件并编辑<br>vim 路径  输入模式：i光标处 a光标后 I本行首 A行尾 o光标下行 O光标上行  命令模式：&#x2F;搜索模式 n&#x2F;N 向下&#x2F;上继续搜索 0&#x2F;$ 行头&#x2F;尾  底线命令：set nu显示行号 set paste 设置粘贴模式</p>
+</blockquote>
+<h2 id="绝对路径和相对路径"><a href="#绝对路径和相对路径" class="headerlink" title="绝对路径和相对路径"></a>绝对路径和相对路径</h2><p>绝对路径从根目录出发，例如&#x2F;home&#x2F;用户名&#x2F;Downloads<br>相对路径从当前所在目录出发，无需以&#x2F;开头<br>. 	当前目录<br>.. 	上一级目录<br>~ 	该用户的home目录</p>
+<h2 id="一些事项"><a href="#一些事项" class="headerlink" title="一些事项"></a>一些事项</h2><p>rm -rf &#x2F;表示强制删除根目录下所有文件夹，斜杠后可以带星号<br>命令实际上是一个个可执行的二进制程序，通过which查看存放位置</p>
+<h2 id="用户权限"><a href="#用户权限" class="headerlink" title="用户权限"></a>用户权限</h2><p>在linux拥有最大权限的账户名为root(超级管理员)，默认使用普通账户，在home目录内不受限<br>通过sudo命令为当前命令调用管理员权限，sudo -i获取管理员权限<br>su - 用户名 临时切换用户,横杠表示切换的时候加载环境变量，exit回到上一个用户<br>普通用户切换需要密码 管理员用户切换无需密码<br>并非所有用户都有权利使用sudo命令，可以对用户进行配置<br>在&#x2F;etc&#x2F;sudoers文件的末尾添加 用户名 ALL&#x3D;(ALL)    NOPASSWD:ALL可以令该用户输入sudo命令无需输入密码</p>
+<h3 id="用户-用户组"><a href="#用户-用户组" class="headerlink" title="用户 用户组"></a>用户 用户组</h3><p>针对多个用户的权限控制<br>创建用户组：groupadd 用户组名<br>删除用户组：groupdel 用户组名</p>
+<p>创建用户：useradd 用户名<br>-g指定用户组 不指定会创建同名组自动加入。当已经存在同名组时，必须使用-g。-d指定用户的home路径</p>
+<p>删除用户：userdel 用户名<br>-r删除用户的home目录</p>
+<p>查看用户所属组：id 用户名<br>不提供用户名则查看自身</p>
+<p>修改用户所属组：usermod -ag 用户组 用户名</p>
+<p>查看用户：getend passwd<br>获得七份信息：密码：用户ID：组ID：描述信息：home目录：执行终端<br>密码用x显示，因为在一次更新后密码不储存于此了</p>
+<h3 id="查看文件所属"><a href="#查看文件所属" class="headerlink" title="查看文件所属"></a>查看文件所属</h3><p>听过ls -l查看内容<br>-或d或l 所属用户权限 所属用户组权限 其他用户权限 所属用户 所属用户组 文件大小 时间</p>
+<p>修改文件权限：chmod 权限 文件或文件夹<br>-R，对文件夹内全部内容执行同样操作<br>示例chmod u&#x3D;rwx,g&#x3D;rx,o&#x3D;x 文件名  ugo分别表示拥有者，拥有者所在组，其他用户</p>
+<p>权限可以用数字表示，rwx分别为421<br>chmod 751 表示u&#x3D;rwx,g&#x3D;rx,o&#x3D;x</p>
+<h3 id="chown修改文件所属用户组"><a href="#chown修改文件所属用户组" class="headerlink" title="chown修改文件所属用户组"></a>chown修改文件所属用户组</h3><p>chown 选项 用户 ： 用户组 文件或文件夹<br>选项-R对文件夹内所有内容应用相同规则<br>：用于分割用户与用户组<br>chown root 文件  将文件所属用户修改为root<br>chown : root 文件 将文件所属用户组修改为root<br>chown root:用户组 文件  将文件所属用户修改为root，用户组修改为用户组</p>
+<h3 id="快捷键"><a href="#快捷键" class="headerlink" title="快捷键"></a>快捷键</h3><p>Ctrl+C 强制停止当前命令（不能用于停用vi&#x2F;vim）<br>history 查看历史输入过的命令<br>！  作为前缀自动匹配上一次执行过的相同前缀的命令<br>ctrl+r输入内容匹配搜索历史命令<br>ctrl+a&#x2F;e&#x2F;←&#x2F;→  跳到开头&#x2F;结尾&#x2F;左跳一个单词&#x2F;右跳一个单词<br>ctrl+l  清屏</p>
+<p>系统服务管理：<br>systemctl start&#x2F;stop&#x2F;status&#x2F;enable&#x2F;disable 参数 启动&#x2F;关闭&#x2F;查看状态&#x2F;开机自启&#x2F;关闭开机自启</p>
+<p>NetworkManager 主网络服务<br>network 副网络服务<br>Firewalld 防火墙服务</p>
+<p>软链接(快捷方式) 作为一个指向，类似于快捷方式<br>ln -s 参数1 参数2  -s创建软链接，将参数一作为被链接的文件或文件夹到参数2 </p>
+<p>时间校准<br>date -d +格式化字符串<br>-d按照给定的字符串显示日期，一般用于日期计算<br>%Y年<br>%y年份后两位<br>%m月份<br>%d日<br>%H小时<br>%M分钟<br>%S秒<br>%s 自1970.01.01 00:00:00 UTC 到现在的秒数<br>date +%Y-%m-%d %H:%M:%S</p>
+<p>正式：<br>服务器的主要作用还是为其他计算器提供服务的配置更高的电脑<br>其他计算机可以用作服务器，但是因为系统和硬件限制并不能完全发挥作为服务器的效用，服务器有自己专门的系统</p>
+<p>典型的服务器模式：<br>C&#x2F;S，Client&#x2F;Server<br>由服务商给客户提供资源或某种功能</p>
+<p>服务器的物理堆叠类型有<br>机架，塔式，刀片式，机柜式<br>机架式是标准的工业设计，方便规划空间，节约空间成本<br>塔式可以认作是机箱，向一个箱式服务器存放柜供电，机箱空间大，方便硬盘和电源的冗余扩展<br>刀片式服务器高密度，支持热插拔，随时可以添加新的组件提高性能。性能的利用性较低，适合用于组件集群<br>机柜式服务器通草在企业中见到，由机架式，刀片式再加上其他设备组合而成</p>
+<p>1964年IBM推出第一台大型服务器，1965年即被改善，由DEC公司推出小型机。在1989年，新概念型小型机被推出，由x86系统构建，Intel 486微处理器。到1989年，Unix服务器RISC CPU和Unix操作系统已经被部署到了服务器上</p>
+<p>客户机访问网站，实际是访问网站服务器。在客户机和网站服务器之间有一台代理服务器（分发器），代理服务器不提供服务，但是将用户的请求进行分类，然后指向指定的服务器，避免服务器的超载（访问上限）</p>
+<p>Unix于1969年诞生，前身为unics，在1973年被C语言之父重写成为Unix<br>linux之父为linus Torwalds，与1991年十月发布linux第一个公开的内核。linux的logo是企鹅<br>Linux操作系统&#x3D;内核+文件系统+应用程序<br>主要为内核，内核管理CPU&#x2F;内存，驱动基本硬件，提供文件系统<br>版本号的组成为：主版本.次版本.修订号<br>目录：<br>&#x2F;boot 		存放系统引导必须的文件，包括内核与启动配置<br>&#x2F;bin,&#x2F;sbin		存放各种命令程序<br>&#x2F;dev			存放硬盘,键盘,鼠标,光驱等各种设备文件<br>&#x2F;etc			存放Linux系统及各种程序的配置文件<br>&#x2F;root,&#x2F;home 		提供给管理员和普通用户的默认家目录<br>&#x2F;var		存放日志文件,邮箱目录等经常变化的文件<br>&#x2F;proc		存放内存中的映射数据,不占用磁盘<br>&#x2F;tmp		存放系统运行过程中使用的一些临时文件</p>
+<p>Linux一切皆文件,家目录类似于Windows系统中的user目录</p>
+<p>系统启动过程:接通电源→BIOS(UEFI):开机自检→BIOS(UEFI)搜索可启动设备→加载内核→启动初始化进程sysemd→挂载文件系统→启动systemd目标→登录界面<br>自检主要检查能不能正常启动</p>
+<h2 id="破解密码"><a href="#破解密码" class="headerlink" title="破解密码"></a>破解密码</h2><p>在内核选择界面按e<br>将光标跳转到Linux版本号所在的行末,空一格输入rd.break console&#x3D;tty0,按ctrl+x<br>界面跳转到switch_root:&#x2F;#代表进入紧急救援模式<br>获取修改密码的权限:把系统真实根目录以读写的权限临时挂载到当前的紧急救援模式下<br>输入mount -o remount,rw &#x2F;  &#x2F;sysroot<br>mount命令用于挂载,-o代表重新挂载,”remount,rw”以读写的权限重新挂载&#x2F;到sysroot目录下,逗号后为追加,算是remount命令的一部分<br>紧急救援模式下的根目录是sysroot<br>将当前工作目录切换至根目录下<br>chroot &#x2F;sysroot&#x2F;  (此时根目录挂载在sysroot下)<br>输入echo 密码 | passwd –stdin 用户名(root) 对密码进行修改,|作为管道符将左边的输出结果赋予右边的passwd<br>跳过SELinux的异常检测<br>SELinux会给文件进行标记,当密码被改变后,文件标记也有变化,此时该文件对于系统是不安全的.通过touch &#x2F;.autorelabel 在根目录下创建一个叫autorelabel的文本文件重置标记,前面的”.”代表这是一个隐藏文件<br>输入reboot或者exit重启或者关闭模式</p>
+<p>命令的执行依赖于shell<br>用户→shell(解释器)→内核(仅认识0,1)→硬件<br>shell在etc&#x2F;shells目录下</p>
+<p>&#x2F;bin&#x2F;bash 是系统内核的默认shell<br>用户向shell下达命令,shell向内核解释命令,然后传递给硬件 然后过程反向输出反馈给用户</p>
+<p>@&#x3D;at 代表在…上<br>[同户名@主机名 文件夹名称]权限标识符<br>#root用户 	$普通用户</p>
+<p>bash(shell)可以提供相对完整的命令补全和标识符<br>esc&#x2F;alt+. 粘贴上一个命令的参数(可以不断切)<br>ctrl+u 清空至行首<br>ctrl+w 往回删除一部分</p>
+<p>显示cal 日历<br>wc统计文本数据 -l行数 -w单词数 -c字节数</p>
+<p>reboot重启<br>poweroff关机<br>shutdown -h now 立刻关机<br>shutdown -h 10:00&#x2F;+10 十点关机&#x2F;十分钟后关机<br>shutdown -r now 立刻重启,默认一分钟\</p>
+<p>运行级别init 0&#x2F;1&#x2F;2&#x2F;3&#x2F;4&#x2F;5&#x2F;6<br>关机&#x2F;单用户(修复模式&#x2F;破解密码模式)&#x2F;字符界面(无网络)&#x2F;字符界面&#x2F;未定义&#x2F;图形界面&#x2F;重启</p>
+<p>ls -A同-a,但不会显示.和..</p>
+<p>pinfo 与man相似,但是每段有自己的独立节点,就像超链接一样<br>ls -l查看当前目录的详细信息</p>
+<p>vim搜索&#x2F;word 切换结果n&#x2F;N<br>撤销u 回复ctrl+r<br>剪切Ndd 剪切N行<br>p 粘贴在行末 P粘贴在行首</p>
+<p>通配符:<br>*,代表所有<br>?代表一个不确定的字符,有几个问号代表几个字符<br>ls &#x2F;etc&#x2F;<em>ab</em> 列出etc目录下所有名称含有ab字符的文档<br>列表集合ls &#x2F;dev&#x2F;tty{13,18,27,3,6} 列出与后面字符相匹配的项<br>{20..30}表示二十到三十<br>2[0-9] 20-29</p>
+<p>head&#x2F;tail -n 参数 查看文本的头部&#x2F;尾部n行,默认十行</p>
+<p>8-12行<br>cat -n &#x2F;etc&#x2F;passwd | head -12 | -5<br>grep 文本过滤 过滤出包含条件的行<br>grep 选项 参数 -n显示行号 -c显示匹配行数 -i忽略大小写 -v取反(不包括)<br>^关键词 以关键词开头的行<br>$关键词,以关键词结尾的行<br>^$输出空行</p>
+<p>重定向:<br>标准输入:从键盘输入内容<br>标准输出:输出到屏幕(终端上)</p>
+<p>重定向:将标准输入或者输出重新定向到别的地方<br>标准输入(stdin,文件描述符为0):默认从键盘输入<br>标准输出(stdout,描述符为1):默认输出到屏幕<br>错误输出(stderr,文件描述符为2),默认输出到屏幕</p>
+<p>输入重定向<br>命令 &lt; 文件 将文件作为命令的标准输入<br>命令 &lt;&lt; 分界符 从标准输入中读入,直到遇见分界符才停止</p>
+<p>输出重定向,两个&gt;&gt;是追加</p>
+<blockquote>
+<p>只重定向标准输出<br>2&gt;	只重定向错误输出<br>&amp;&gt;	重定向标准输出与错误输出</p>
+</blockquote>
+<p>find 搜索路径 条件1 选项 条件2 根据预设的条件”递归”查找对应文件<br>-a查找条件为条件1和2<br>-o条件为1或2<br>多个条件情况下省略默认为-a</p>
+<p>type 按文档的类型查找(f文本文件,d目录,l快捷方式)<br>格式:find &#x2F;路径&#x2F;目录 -type f或d或l</p>
+<p>-name或-iname(iname忽略大小写) 按名字查找,支持通配符<br>格式:<br>find &#x2F;路径&#x2F;目录 -name或-name “文档名”</p>
+<p>-size 按大小查找,+大于-小于,后面跟数字和G,M等<br>-user 按文档的所有者进行查询<br>-group按文档的所属组查找<br>-maxdepth … -maxdepth 层数</p>
+<p>管道符一般并不支持多参数命令,例如cp<br>-exec 		对查找结果执行二次处理<br>find &#x2F; -user student -type f -exec cp {} &#x2F;mnt&#x2F;abc&#x2F; ;<br>{}代表find命令查询出的每一个结果<br>-exec要以;表示结束,否则不知道何时结束而报错</p>
+<p>-mtime +&#x2F;-n<br>find 参数 -mtime +N或-N或N<br>-N表示N天之内<br>+N表示N天之前<br>N表示前N天的一天<br>实际上-N表示N天之内,+N表示N天之外,N表示这两之间的那一天<br>比如30号的前五天之内为30,29,28,27,26.这前五天是包含30号在内的<br>但是在30号的5天之前是不包含本身的,也就是说这是29,28,27,26,25之前的天数,从24号开始算起.N表示25号</p>
+<p>locate 文档名称<br>配合数据库查找文件位置</p>
+<p>whereis 文档名称<br>查看文件的位置,只能查二进制(含可执行)文件,说明文档,源文件等</p>
+<p>本地用户与组<br>默认创建一个与用户同名的组将用户分类<br>useradd 选项 参数<br>-u uid 指定用户的uid.系统程序用户的uid为1-999,普通用户从1000开始,root为0<br>-d 参数 用户名 指定用户的家目录</p>
+<p>-s &#x2F;解释器路径 用户名<br>指定用户的登录shell,不指定默认为&#x2F;bin&#x2F;bach</p>
+<p>-G 附加组 用户名 新用户默认是没有附加组的<br>groupadd 组名  	新建附加组<br>useradd -G 附加组 用户名 		新建用户并加入指定附加组</p>
+<p>修改密码<br>passwd 用户名<br>没有用户名时默认为当前登录用户<br>非交互式修改密码:(无需二次确认)<br>passwd –stdin 用户名 或带上echo使用管道符<br>非交互式修改会被调用历史记录看见密码</p>
+<p>临时切换用户:<br>su - 用户名 </p>
+<p>passwd文件的信息:<br>用户名:密码占位符:用户uid:基本组的gid:描述信息(可以为空):用户的家目录路径:用户的默认登录shell</p>
+<p>etc目录下的shadow文档用于存放用户密码,默认加密<br>用户名:加密过的密码:上次修改的时间戳:<br>-u 修改uid<br>-d 修改家目录<br>-s &#x2F;shell解释器的路径<br>-G 指定一个附加组</p>
+<p>user 选项 用户名<br>-r删除用户的同时删除家目录</p>
+<p>创建组<br>groupadd -g 指定组的gid<br>groupdel    删除组</p>
+<p>添加用户到组<br>gpasswd -a 用户名 组名  添加用户<br>gpasswd -d 用户名 组名  删除用户</p>
+<p>etc下的group文件中<br>组名:密码占位符:gid:组成员列表(可空)</p>
+<p>ls -ld 文件或目录<br>文件类型权限权限权限. 子目录个数&#x2F;硬链接个数 拥有者 所属组 大小 创建时间 路径<br>d开头为目录,-为文本,l为快捷方式</p>
+<p>Linux判断用户权限的方式<br>先判断所有者,优先级为:所有者&gt;所属组&gt;其他用户(匹配到哪一步即停止到哪里).然后判断文档的权限归属问题,再查看相应权限位置的权限设置</p>
+<p>chmod 归属关系 +&#x2F;-&#x2F;&#x3D; 权限类别 &#x2F;文档<br>chmod o+w &#x2F;test    为其他用户(o)添加写入权限(w)<br>chmod u-w &#x2F;test 	删除所有者的写入权限<br>chmod g&#x3D;— &#x2F;test   令所属组的权限&#x3D;无<br>chmod u&#x3D;r &#x2F;test 	把所有者u的权限设置为只读r<br>chmod ugo&#x3D;rwx &#x2F;test 将ugo的权限都设置为rwx<br>chmod u&#x3D;wrx,g&#x3D;rx,u&#x3D;— &#x2F;test 	我想,不用解释了<br>chmod 764 &#x2F;test 	将test的三位用户类型权限分别修改为rwx,rx,r<br>可选项:<br>-R 递归设置所有目录与文档</p>
+<p>如果对父目录无权限,对子文档有权限也无意义<br>Set GID可以使目录下新增的文档新建时自动设置与父目录相同的组<br>chmod g+s或g-s &#x2F;路径<br>附加在所属组的执行权限x位上,所属组的权限标识会变为s或S<br>s代表所属组的执行权限为x,S代表所属组的执行权限为-</p>
+<p>一些题目<br>rd.break console&#x3D;tty0<br>mount -o remount,rw &#x2F; &#x2F;sysroot<br>chroot &#x2F;sysroot<br>passwd相关命令<br>touch &#x2F;.autorelabel<br>exit<br>reboot</p>
+<p>过滤&#x2F;etc&#x2F;passwd 包含字符串root的行,过滤以字符串root开头的行<br>grep root &#x2F;etc&#x2F;passwd<br>grep ^root &#x2F;etc&#x2F;passwd<br>过滤以字符串nologin结尾的行<br>grep root$ &#x2F;etc&#x2F;passwd<br>过滤fstab的有效配置行并存放到&#x2F;root&#x2F;101.txt<br>grep -v ^$ &#x2F;etc&#x2F;passwd | grep -v ^# &gt; &#x2F;root&#x2F;101.txt<br>-v表示取反,得到满足条件的行,然后对其取反<br>查看&#x2F;etc&#x2F;以g开头,p结尾的文档<br>ls &#x2F;etc&#x2F; g<em>p<br>或find &#x2F;etc&#x2F; maxdepth 1 -name g</em>p<br>*可满足任意的字符与字符数量,?只表示任意的字符<br>创建一个web组,gid为8484<br>groupadd -g 8484 web</p>
+<p>创建一个用户harry,该用户的uid为10086,属于附加组web,用户密码为redhat<br>useradd -u 10086 -G web harry<br>echo redhat | passwd –stdin harry</p>
+<p>统计&#x2F;etc目录下的文档数<br>ls &#x2F;etc | wc -l</p>
+<p>创建一个用户natasha,以nologin作为shell解释器,属于harry组,用户密码为redhat<br>user -s &#x2F;sbin&#x2F;login -G harry natasha<br>echo redhat | passwd –stdin natasha</p>
+<p>把当前的日期和时间按照年-月-日 时:分:秒 的格式存放到文件&#x2F;root&#x2F;time.txt中<br>date +’%Y-%m-%d %H-%M-%S’ &gt;&gt; &#x2F;root&#x2F;time.txt<br>查找所有属于student用户的文件,并复制到目录&#x2F;mnt&#x2F;studir下<br>复制后的文件所有者需保持不变<br>find &#x2F; -user student type f -exec copy -p {} &#x2F;mnt&#x2F;studir ;<br>ls -Al<br>root用户在使用cp命令时会更改所有者等关系,当使用-p时,便仅进行复制,不对信息进行更改<br>type f查找文件<br>访问权限有读 写 执行,对应rwx<br>使用权限的对象为 所有者 所属组 其他用户,对应ugo<br>文本文件放下不谈<br>ls命令用到的权限是r<br>rm,mv,cp,mkdir,touch等更改内容(不包括更改目录属性)用到的权限是w<br>cd用到的是x<br>若对父目录无权限,则对子目录与文件有权限也无意义<br>普通用户无法使用chmod命令,一个普通的文件一般不需要加执行权限,有执行权限的文件一般为脚本,绿色显示<br>目录必须有执行权限,否则cd无法进入<br>chmod harry:root 文件 则会将文件的所有者与所属组改为harry和root<br>:root 仅更改所属组<br>harry 仅更改所有者</p>
+<p>Set GID:令新增的子目录及文件自动继承父目录的所属组<br>chmod o&#x3D;- 令其他用户无权限<br>chmod g+s (s代表执行权限原本是x,S代表是-,就是代表被代替之前的位有没有执行权限) g表示组,s表示有执行权限 s&#x2F;S表示这个目录下的所有文件递归继承</p>
+<p>Set UID:传递所有者身份,用户可以暂时拥有所有者的权限<br>chmod u+&#x2F;-s 路径&#x2F;可执行文件<br>附加在所有者的执行权限位x上,其他同Set GID<br>在用户执行这个文件时,可以暂时调用所有者的权限</p>
+<p>Sticky Bit<br>防止用户滥用执行权限(禁止用户操作他人文档),只有所有者能操作(删除等)自己的文档.其他人无法操作<br>适用范围:适用于开放w权限的目录<br>chmod o+&#x2F;-t 路径&#x2F;文档<br>特征,附加在执行权限x位上.其他用户的权限标识变为t&#x2F;T,t表示x,T表示-</p>
+<p>acl策略:访问控制列表<br>针对个别用户&#x2F;组设置独立的权限<br>可以实现更精细的权限控制<br>setfacl 选项 u或g:用户名:组名:权限类别(rw-) 文档路径<br>acl权限查看:getfacl<br>兼容ext3&#x2F;4,xfs文件系统,默认支持Linux平台<br>-m修改 -R递归 -x删除指定用户或组的acl权限 -b删除所有acl权限</p>
+<p>监控与进程管理<br>top 选项<br>-d 刷新时间 -u 用户名<br>交互快捷键:<br>P 按cpu进行排序<br>M 按内存进行排序<br>q 退出<br>程序:静态的代码,占用磁盘储存空间<br>进程:动态的代码,占用内存和CPU<br>金城的标识为PID</p>
+<p>僵尸进程(状态):进程卡死(是否等待这个进程),无法退出与使用.僵尸进程会大量占用系统资源,此时需要进程的PID以结束僵尸进程</p>
+<p>优先级&#x3D;优先系数+nice值<br>优先级高的进程优先执行,NICE值的取值范围为-20~19,NICE值越大优先级越低,默认0</p>
+<p>优先级设置:renice -n nice值 进程号<br>设置新进程的优先级:nice -n nice值 命令</p>
+<p>sleep 数字  等待一定秒数</p>
+<p>ctrl+C 中断当前命令程序<br>kill -9 PID 		强制杀死进程,-9为强制<br>killall -9 进程名 	按进程名称强制杀死进程<br>pkill 查找条件		模糊搜索杀死进程,一般不用</p>
+<p>杀死一个用户所有的进程(踢出用户)<br>killall -9 -u 用户名</p>
+<p>分析和存储日志<br>日志系统&#x3D;systemd-journald服务+rsyslog服务<br>记录系统和程序运行中发生的时间<br>用于信息安全控制的依据和故障排除<br>默认存储目录为&#x2F;var&#x2F;log</p>
+<p>常见的日志文件<br>messages		记录内核消息,各种服务的公共消息<br>demesg 		记录系统启动过程的各种消息<br>cron 		记录cron计划任务相关的消息<br>maillog 	记录邮件收发相关的消息<br>secure		记录与访问限制相关的安全消息</p>
+<p>日志消息的优先级分为0-7共八种,数值越小越紧急 紧急&#x2F;警告&#x2F;严重&#x2F;错误&#x2F;提醒&#x2F;注意&#x2F;信息&#x2F;调试<br>通过journalctl 查看近期所有的消息记录<br>-u 服务名 -p优先级 -f追踪十行</p>
+<p>NTP时间同步(Network Time Protocol)<br>装包,配置,起服务<br>1.安装一个与NTP时间同步服务器进行沟通的软件<br>npm -q chrony<br>vim &#x2F;etc&#x2F;chrony.conf<br>域名替换为 classroom.example.com iburst<br>服务重启 systemctl restart chronyd(加d代表服务,没有d是软件), 重启服务<br>enable chronyd		设置开机自启<br>chronyc sources -v<br>*同步成功,+备用服务器,?同步失败</p>
+<p>周期性计划任务<br>crontab -e -u 用户名  以某个用户的身份添加计划任务<br>时间格式<br>分  时  日  月  周  命令(或脚本,绝对路径)<br>0   8   8   3   *   &#x2F;    在3月8日运行脚本<br>数字代表具体的时间<br>*代表匹配范围内的任意时间<br>,分割多个不连续的时间点<br>-指定连续时间范围<br>&#x2F;n代表频率<br>crontab -l -u 用户名查看用户的计划任务</p>
+<p>网络基础知识<br>IP地址,唯一标识网络中一台主机<br>组成:32个二进制位<br>01010010.10010100.10100100.010000001<br>每八位一个点,上述为82.148.164.65(点分十进制地址)<br>最大的ip地址和最小的分别是255.255.255.255&#x2F;0.0.0.0 这两位作为特殊地址一般不提供使用<br>一般计算机网络使用<br>A类:1-127    	网.主.主.主<br>B类:128-191 		网.网.主.主<br>C类:192.223    	网.网.网.主</p>
+<p>组播与科研专用:<br>D类:224-239 ←记此即可<br>E类:240-254</p>
+<p>B类可认为是8比特位上限到常用ip前(128-191),然后再根据D类占位可以推出5类所使用的ip地址<br>网络位与主机位:<br>网络位:区号<br>主机位:电话号码</p>
+<p>一般情况下,只有同网段的主机才能进行直接通信</p>
+<p>管理Linux网络:<br>两台计算机通信必须要有ip&#x2F;子网掩码<br>一般要有网关地址</p>
+<p>子网掩码:用于区分网络位与主机位<br>一般写法为ip&#x2F;掩码<br>有时是ip&#x2F;8,这代表了一个网段,ip取值范围为<br>xx.0.0.1-xx.255.255.254<br>8←表示的是子网掩码长度,表示连续的数,网段主机位使用0表示,代表同一网段</p>
+<p>DHCP<br>通过交换机寻找到主机,并为主机提供自动分配的ip地址.同一网络环境中仅允许一个DHCP服务器,否则出错</p>
+<p>网关地址:用于解决不同网络通信(路由器)</p>
+<p>DNS服务器:将域名解析为ip地址<br>网址:域名→可以被解析为ip地址</p>
+<p>短主机名:server0<br>完整主机名:server0.example.com<br>hostname查询主机名<br>临时修改主机名:hostname 新主机名<br>永久方法一:&#x2F;etc&#x2F;hostname中修改<br>方法二:hostnamectl set-hostname 主机名</p>
+<p>修改IP地址&#x2F;子网掩码,网关地址,DNS地址<br>nmcli命令(network manager client)<br>通过nmcli connection show 获取连接的名称(虚拟网卡?)</p>
+<p>修改连接的ip地址等信息<br>nmcli connection modify eth0 ipv4.method manual ipv4.addresses ‘172.25.0.11&#x2F;24 172.25.0.254’ ipv4.dns 172.25.0.254 connection.autoconnect yes<br>第一个是ip地址,第二个网关地址.dns地址因为只有一个参数所以不用引号,然后设置自动连接.上述命令并不能理科生效<br>nmcli connection up eth0 立刻重启eth0的连接状态</p>
+<p>为了保证服务器稳定性,一般使用静态ip地址</p>
+<p>查看网络连接状态：</p>
+<p>nmcli n connectivity(简写为c)<br>网络连接状态共有五种：full、limited（连网，但无法上网）、portal（连网，但需要认证登录后才能上网）、none（没连网）和 unknown。</p>
+<p>nmcli connection show可简写为nmcli c,show是默认项,connection可简写为c,co,con,conn</p>
+<p>修改连接：</p>
+<p>nmcli c modify ens33  [ + | - ]选项 选项值  # 或<br>nmcli c m ens33  [ + | - ]选项 选项值</p>
+<p>下面给出常用修改示例：</p>
+<p>nmcli c m ens33 ipv4.address 192.168.80.10&#x2F;24  # 修改 IP 地址和子网掩码<br>nmcli c m ens33 ipv4.method manual             # 修改为静态配置，默认是 auto<br>nmcli c m ens33 ipv4.gateway 192.168.80.2      # 修改默认网关<br>nmcli c m ens33 ipv4.dns 192.168.80.2          # 修改 DNS<br>nmcli c m ens33 +ipv4.dns 114.114.114.114      # 添加一个 DNS<br>nmcli c m ens33 ipv6.method disabled           # 将 IPv6 禁用<br>nmcli c m ens33 connection.autoconnect yes     # 开机启动<br>注意，必须先修改 ipv4.address，然后才能修改 ipv4.method！<br>connection.interface-name（别名 ifname）：设备名；<br>nmcli connection modify eth0 ipv4.method manual ipv4.addresses ‘172.25.0.11&#x2F;24 172.25.0.254’ ipv4.dns 172.25.0.254 connection.autoconnect yes</p>
+<p>用空引号””代替选项的值，可将选项设回默认值（以 ipv4.method 为例）：</p>
+<p>nmcli c m ens33 ipv4.method “”</p>
+<p>若想要查看内核版本,找到etc目录下的release结尾的文件打开即可<br>chown修改文件拥有属性等change own<br>setfacl -m g:web:rwx …<br>useradd -s &#x2F;bin&#x2F;nologin -u 3000<br>setfacl u:natasha:rwx …</p>
+<p>vim &#x2F;etc&#x2F;chrony.conf</p>
+<p>ssh ip地址 连接到主机<br>linux命令行下载工具:wget -O &#x2F;存放路径&#x2F;文件名 下载链接<br>存放路径与文件名是-O的参数,如不更改则默认下载于当前路径</p>
+<p>在linux中 安装和更新软件包主要来源是官方镜像光盘<br>另外来源是软件官网的rpm包<br>rpm包:红帽体系Linux<br>Linux命令行下载工具:wget<br>wget [-O &#x2F;路径&#x2F;文件名称] 文件地址<br>压缩格式使用红色显示<br>安装rpm包使用rpm -i 软件包名.rpm</p>
+<p>查看软件包是否已安装rpm -q 软件包</p>
+<p>卸载软件包rpm -e 软件包</p>
+<p>Linux中的绝大部分软件包都存在依赖关系,由于开源的性质,Linux的软件包之间可能存在相互调用功能的情况<br>rpm是手动安装命令,当软件包存在的依赖包过多时,需要一个个安装过去非常麻烦,所以这个时候需要使用YUM(YellowDogUpdateManager,黄狗升级管理),一个红帽系统中专门用于安装和更新软件管理的工具,可以为客户端自动解决依赖关系<br>YUM安装软件包需要rpm包与软件清单<br>YUM需要配置源,方法一:<br>修改配置文件,重新指定一个YUM软件仓库<br>vim &#x2F;etc&#x2F;yum.repos.d&#x2F;文件<br>配置文件的名称为*.repo<br>配置文件中需要编写五个项<br>[rhe17]  		仓库标识符,必须首行<br>name   			仓库描述信息<br>baseurl&#x3D;… 	仓库地址,网络仓库<br>enabled&#x3D;0&#x2F;1 	1代表启动此仓库,停用0<br>gpgcheck&#x3D;0&#x2F;1	跳过数字签名验证<br>数字签名验证对于私人小仓库必须开启,防止他人伪造作者信息写入恶意代码</p>
+<p>检验配置文件成功 yum clean all<br>yum repolist   </p>
+<p>yum安装软件包<br>yum install  软件包</p>
+<p>若不清理缓存,在查询信息时会返回上一次成功的结果,所以需要yum clean all</p>
+<p>方法二:yum-config-manager -add-repo 仓库地址<br>此时在&#x2F;etc&#x2F;yum.repo.d&#x2F;下会出现一个以仓库地址为文件名的配置信息文本,其中的斜杠会被换成下划线<br>使用工具生成的配置文件没有gpgcheck,需要手动添加</p>
+<p>卸载软件包:卸载时一般只卸载软件包本体,不卸载其依赖包(防止软件包的依赖包被其他软件包依赖)<br>rpm -e 软件包名<br>yum remove 软件包名  不使用-y选项就不会卸载软件包<br>yum provides 命令     搜寻该命令有哪一个软件包提供</p>
+<p>如果配置目录下有一个错误,都会影响其他所有文件,所以仅配置一个仓库时建议清空目录</p>
+<p>LDPA(Lightweight Directoty Access Protocol)轻量级目录访问协议<br>实现网络用户集中管理,用户由LDAP服务器创建<br>存储网络用户,为客户端提供用户信息<br>安装软件sssd包<br>yum -y install sssd<br>利用图形工具authcofig-tui设置sssd配置文件,指定ldap服务端位置<br>重启sssd程序systemctl restart sssd<br>systemctl enable sssd<br>验证 grep ldapuser0 &#x2F;etc&#x2F;passwd<br>无输出说明非本地用户<br>id ldapuser0   检测ldap服务器用户</p>
+<p>使用TLS加密技术,需要服务端与加密技术base DN(Domain Name 基础域名)<br>例如qq的域名就是qq.com,前面的www一般只是用于表示主页</p>
+<p>下载证书到authconfig-tui提供的地址<br>wget 证书地址(需提前cd进指定目录)</p>
+<p>重启sssd服务并设置自启<br>systemctl restart sssd<br>systemctl enable ssse</p>
+<p>除了id ldapuser0查询用户之外<br>还可以通过grep ^ldapuser &#x2F;etc&#x2F;passwd查询本地是否有这些用户,这些实际都是网络用户<br>这些网络用户可以登录,但是没有家目录,需要指定&#x2F;挂载一个家目录<br>mkdir &#x2F;share  创建一个家目录<br>mount classroom.example.com:&#x2F;home&#x2F;guests &#x2F;share 挂载家目录,通过NFS文件共享服务给网络用户,服务器上以配置好共享,仅需要通过挂载到本地</p>
+<p>再次尝试登录,如失败则将家目录挂载到&#x2F;home&#x2F;guests&#x2F;  创建一个准确的家目录路径<br>mkdir &#x2F;home&#x2F;guests<br>卸载之前的错误操作 umount &#x2F;share<br>mount classroom.example.com:&#x2F;home&#x2F;guests<br>再次尝试登录<br>为了防止下次重启失效,使用autofs工具实现自动挂载<br>yum -y install autofs<br>此时自动在etc目录下生成一个交auto.master.d的配置文件<br>尾行加入&#x2F;home&#x2F;guests &#x2F;etc&#x2F;auto.rule<br>shift+G跳到最后一行,然后按o新开一行,并写入上述配置<br>规则文件本不存在,需要手动创建<br>挂载点目录 规则文件路径(默认没有)<br>ldapuser0 -rw classroom.example.com:&#x2F;home&#x2F;guests&#x2F;ldapuser0<br>第一个字段写用户名 第二个字段写用户名的权限,需要对家目录有读写权限 第三个是挂载的路径</p>
+<p>设置自动挂载的开机自启动<br>systemctl restart autofs<br>systemcyl enable autofs</p>
+<p>仅登录时挂载,退出一段时间后卸载,避免资源的占用<br>ldapuser0可以换成通配符,这样所有用户都可以自行挂载 &#x2F;guests&#x2F;之后换成&amp;,匹配所有子目录</p>
+<p>用户名 读写权限 远程共享的目录的地址与路径</p>
+<p>快捷方式:软连接与硬链接<br>元数据:文档的属性信息<br>软连接:快捷方式→区域数据→i节点→源文档→i节点→数据区域:文档数据<br>源文档记录了源文件的地址,若被删除,链接失效.软链接可以存放在不同分区&#x2F;文件系统,常用</p>
+<p>常见的系统出错与引导方法</p>
+<p>设备等待超时:一般是fstab文件配置有问题,此时自动进入紧急救援模式<br>fstab常见错误:<br>文件系统损坏		系统自动进入紧急救援模式<br>挂载的设备不存在		等待超时后,自动进入紧急模式<br>挂载点不存在			启动创建挂载点,若无法创建则进入紧急救援模式<br>挂载点错误 			系统自动改进入紧急模式</p>
+<p>在给予密码后vim进入etc&#x2F;fstab修复即可</p>
+<p>管理系统守护程序和网络服务<br>systemctl:用于管理各种服务的工具</p>
+<p>用法格式:<br>systemctl 参数 服务名称</p>
+<p>常用参数:<br>start   		启动服务<br>restart 		重启服务<br>stop 			停止服务<br>status 			查看服务状态(绿正常,红启动报错,无 服务未启动)<br>enable&#x2F;disable 	设置&#x2F;禁用自启<br>mask&#x2F;unmask 	屏蔽&#x2F;取消屏蔽服务</p>
+<p>systemd目标:类似运行级别,底层原理就是调用运行级别<br>目标<br>graphical.target 		多用户模式,图形界面<br>multi-user.target 		多用户模式,字符界面<br>rescue.target 			救援单用户模式<br>emergency.target 		紧急shell模式</p>
+<p>切换运行目标(模式)<br>systemctl isolate 运行目标   此为临时修改<br>systemctl get-default 		查看默认运行的目标<br>systemctl set-default  		设置默认运行目标</p>
+<p>ifconfig 		查看ip地址<br>route			查看网关</p>
+<p>网卡可通过vim &#x2F;etc&#x2F;sysconfig&#x2F;network-scripts&#x2F;ifcfg-eth0进行配置<br>prefixo是网管<br>bootproto是连接方式,动态是ldap</p>
+<p>常见的压缩格式及命令工具<br>.gz   gzip,gunzip(速度最快,压缩比例最小)<br>.bz2  bzip2,bunzip2<br>.xz   xz,unxz(速度最慢,压缩比例最大)</p>
+<p>tar -_cf  &#x2F;压缩包路径&#x2F;压缩包名称.tar.格式  &#x2F;被压缩文档的路径<br>-c创建归档,必须要有的选项  -f指定归档文件名称,必须放在选项最后<br>-z -j -J分别对应gz,bz2,xz格式<br>-v 输出释放tar包的过程<br>-p 解压到制作tar包时保留的源路径</p>
+<p>ssh服务远程管理<br>ssh 选项 用户名@对方的ip地址<br>-X 远程管理时,在本机运行对方的图形程序<br>-p 端口号	指定端口号<br>scp ssh+cp 简单传输工具<br>scp &#x2F;源文档 用户名@目标机器IP地址:&#x2F;目标路径<br>-r  递归  复制目录时必须</p>
+<p>ls -i &#x2F;文档路径 可以查看i节点</p>
+<p>yum clean all<br>yum-config-manager –add-repo 地址<br>yum -y install httpd<br>-y表示全yes(通过)<br>systemctl restart httpd<br>systemctl status httpd</p>
+<p>systemctl get-default</p>
+<p>tar -jcf &#x2F;mnt&#x2F;guazai&#x2F;tar&#x2F;bz2 &#x2F;etc&#x2F;fstab<br>ln -s &#x2F;mnt&#x2F; &#x2F;root&#x2F;m1</p>
+<p>cd &#x2F;etc&#x2F;openldap&#x2F;cacerts 证书地址<br>wget 证书地址<br>yum -y install autofs<br>vim &#x2F;etc&#x2F;auto.master<br>&#x2F;home&#x2F;guests     &#x2F;etc&#x2F;auto.rule<br>指定受检测的目录,不存在会自动创建    配置文件路径<br>vim &#x2F;etc&#x2F;auto.rule<br>ldapuser10 -rw classroom.example.com:&#x2F;home&#x2F;guests&#x2F;ldapuser10<br>挂载目录 挂载文件类型及权限 :设备名称<br>ldapuser10是不存在的目录,当用户访问该路径时,会自动挂载<br>网络地址:挂载路径<br>当用户访问ldapuser10这个目录时,触发autofs,将网络地址上的home&#x2F;guests&#x2F;ldapuser10挂载到本地的ldapuser10上</p>
+<p>文件系统原理及应用:识别硬盘→分区规划→格式化→挂载使用<br>格式化:赋予空间文件系统的过程,对空间赋予规则<br>文件系统:存储数据的规则<br>典型的文件系统类型:ext3,4 第*代扩展文件系统<br>xfs  高级日志文件系统<br>swap  交换空间(虚拟内存):利用硬盘空间,缓解物理真实内存不足<br>u盘:fat32<br>系统,每次仅能存放单个不超过4G的文件<br>exfat突破了4G的限制<br>MBR分区模式有两个分区方案<br>1.1-4个主分区<br>2.0-3个主分区+1个扩展分区(n个逻辑分区)<br>最大支持2.2TB硬盘  扩展分区不能格式化与存储数据,容量大小显示1k,逻辑分区基于扩展分区创建</p>
+<p>lsblk磁盘分区管理工具<br>sdb是未进行分区的硬盘<br>硬盘disk<br>分区part<br>卷组vlm</p>
+<p>查看分区表:fdisk -l &#x2F;dev&#x2F;硬盘名<br>fdisk &#x2F;dev&#x2F;硬盘名   使用硬盘管理工具操作硬盘<br>p查看现有分区表 d删除分区 q放弃更改并退出 w保存更改并退出<br>n开始分区 主&#x2F;扩展 p&#x2F;e<br>然后+size</p>
+<p>mkfs.格式 &#x2F;dev&#x2F;磁盘设备分区  格式化分区<br>blkid 参数    可以查看文件系统类型  TYPE&#x3D;”类型”</p>
+<p>创建挂载点mkdir &#x2F;part1<br>mount &#x2F;dev&#x2F;sdb1 &#x2F;part1<br>之后往part1中写入数据时,实际是在向sdb1中写入<br>df -h  查看已挂载的设备 -h会将格式变为标准格式,加-T可以查看文件系统</p>
+<p>设置开机自动挂载(修改etc&#x2F;fstab)<br>设备路径(分区路径) 挂载点 文件系统类型 挂载参数 备份标记 检测顺序<br>后三个默认defaults 0 0 这样就好</p>
+<p>检查&#x2F;etc&#x2F;fstab文件自动挂载的格式并挂载还未挂载的设备<br>mount -a</p>
+<p>如果针对一块已经分区且正在使用的硬盘对剩余的空间进行分区,保存退出后会有警告:重新读取分区列表失败,设备资源繁忙.   此时内核仍然使用了一个旧的列表,新的列表将会在下次重启时使用.<br>此时可以使用partprobe立刻获取新的分区表</p>
+<p>扩展分区无法格式化与挂载使用,强制格式化会出错<br>硬盘命名规则:<br>sda1:<br>SCSI设备<br>Disk设备<br>第一块硬盘<br>第一个分区</p>
+<p>sdb2:该主机SCSI接口协议的第二块的第二个主分区<br>sdb4:类似上,但是扩展分区<br>sdc6:该主机SCSI接口协议的第三块硬盘的第六个分区(或者第二个逻辑分区)</p>
+<p>vdb2,VMware添加的虚拟硬盘</p>
+<p>挂载点:一般情况下为空目录,如果挂载到一个非空目录,那么此时任何的写入与删除操作都是对挂载点的操作,卸载后原有的内容恢复<br>如果重复对一个路径挂载,则二次挂载的会被先前挂载的所覆盖,不会显示出来</p>
+<p>交换分区:<br>类似于Windows中的虚拟内存,Windows将系统上的一块区域当成RAM(内存)使用,以临时缓解物理内存不足的问题(仅为缓解,并不能根除)<br>目前最快的硬盘协议接口是nvme,拥有3KMB&#x2F;s的传输速度,但仍没有内存快</p>
+<p>配置交换空间<br>1.分区(决定了交换空间的大小)<br>2.格式化 格式化是没有swap类型的,需要的命令是mkswap,不是mkfs.swap<br>3.查看文件系统类型 blkid 路径<br>4.临时启用交换分区swapon 路径    swapon -s查看是否启用成功<br>Priority数值越大,当物理内存不足时被调用于临时存储的优先级越高<br>5.停用交换分区  swapoff 设备路径<br>6.开机自动启用交换分区fstab<br>&#x2F;dev&#x2F;sdb6 swap swap defaults 0 0<br>因为交换分区不存在挂载点,所以挂载点处写swap<br>7.检查fstab中文件系统是swap的配置,并启用还未启用的交换分区<br>swapon -a<br>swapon -s  再次查询,发现并重新启用交换空间</p>
+<p>分区加密通过密码,先分区再加密<br>cryptsetup 加密格式 路径<br>cryptsetup luksFormat<br>完事后进入一个交互式命令<br>确认后按提示输入8位密码,对密码的复杂度有要求</p>
+<p>解密:<br>cryptsetup luksOpen 路径 文件名<br>ls &#x2F;dev&#x2F;mapper&#x2F;  在此会出现一个解密之后的自定义命名文件</p>
+<p>完事后仍需再次格式化加密分区,此时可以像正常分区一样格式化</p>
+<p>echo $? 检测上一条命令是否报错,0为正确输出<br>不使用开机自动挂载的原因是不支持,重启后需要重新解密<br>不使用时卸载,然后自行加锁</p>
+<p>验证加锁是否成功.仅需要重新挂在一次,此时提示设备不存在为已上锁</p>
+<p>零散的存放空间可以被卷组统一,相当于是将各个磁盘没用到的空间归为了一块虚拟磁盘,可以随时对其进行划分成为虚拟分区(逻辑卷).之前都是物理卷,因为是直接对物理磁盘进行的操作</p>
+<p>物理卷管理pvs 卷组管理vgs   逻辑卷管理lvs<br>创建 显示 删除 create&#x2F;display&#x2F;remove<br>一般是pv&#x2F;vg&#x2F;lv+create&#x2F;display&#x2F;remove<br>但是物理卷不能扩展,只有卷组和逻辑卷能扩展extend<br>从卷组中划分逻辑卷<br>lvcreate -L 逻辑卷 -n 逻辑卷名 卷组名称(基于哪个卷组创建)<br>p 物理<br>v 卷组<br>g 组<br>l 逻辑<br>s 扫描(pv&#x2F;vg&#x2F;lvs都是扫描卷)</p>
+<p>挂载使用:mkdir &#x2F;lv<br>vim &#x2F;etc&#x2F;fstab<br>&#x2F;dev&#x2F;myvg&#x2F;mylv &#x2F;lv ext3 defaults 0 0<br>mount -a</p>
+<p>逻辑卷优点:整合零散空间,扩大空间大小</p>
+<p>逻辑卷空间的扩大:<br>情况1,卷组有足够的空间<br>lvextend -L +&#x2F;文件大小(可以不带加号) 逻辑卷址<br>但是df -Th查看大小又和lsblk的不同</p>
+<p>刷新&#x2F;扩展文件系统<br>ext2-4使用resize2fs 卷址<br>xfs使用xfs_growfs   卷址</p>
+<p>情况2,卷组没有足够的剩余空间<br>扩大卷组:vgextend 卷组名 闲置分区<br>然后按照第一种情况扩展</p>
+<p>调整逻辑卷PE大小<br>卷组划分空间的最小单位称作PE,默认4M<br>大小不符合设定是因为需要预留一部分卷组的属性信息,所以会少一点或多一点.因为逻辑卷基于卷组进行创建,所以逻辑卷的PE和卷组共同.可以通过vgdisplay查看到.会自动补全到4的倍数</p>
+<p>情况1:创建卷组时设置PE大小<br>vgcreate -s 大小 卷组名 卷址  需要能被大多数卷组大小整除,同时也要足够存放属性信息,所以2M最好<br>如果报错,需要使用partprobe刷新</p>
+<p>修改已存在的卷组PE大小(要求:2的次幂)<br>vgchange -s PE大小 卷组名称<br>大小需要考虑到卷组内所有文件的大小,比如存在一个52M的文件,则不能将PE大小改为8,一定需要是所有文件大小的公因数</p>
+<p>删除逻辑卷:<br>意义不大<br>umount &#x2F;lv<br>删除fstab文件中对应的设置,防止卡开机加载<br>lvremove 逻辑卷址    移除逻辑卷<br>vgremove 卷组名        移除卷组<br>pvremove 物理卷名	物理卷会自动创建,但不会自动删除</p>
+<p>逻辑卷的缩小,无意义,易出错<br>ext4支持缩小,但仍容易出错</p>
+<p>rd.break console&#x3D;tty0<br>umount -o remount,rw &#x2F; &#x2F;sysroot<br>chroot &#x2F;sysroot&#x2F;<br>echo 密码 | passwd –stdin 账户 (此命令在部分系统中无法识别stdin)<br>touch &#x2F;.autorelabel<br>exit<br>reboot</p>
+<p>nmcli c s<br>nmcli c m eth0 ipv4.addresses “172.25.0.11&#x2F;24 172.25.0.254” ipv4.dns 172.25.0.254 ipv4.method manual ipv4.dns-search group8.example connection.autoconnect yes connection.interface-name eth0<br>hostnamextl set-hostname 主机名</p>
+<p>rm -rf &#x2F;etc&#x2F;yum.repos.d&#x2F;*<br>yum-config-manager –add-repo 地址<br>或vim &#x2F;etc&#x2F;yum.repos.d&#x2F;自定名.repo<br>[仓库名]<br>描述name &#x3D;<br>地址baseurl &#x3D;<br>是否启用enable &#x3D; 1<br>gpg签名gpgcheck &#x3D; 0<br>yum clean all<br>yum repolist</p>
+<p>lsblk 查看硬盘情况<br>fdisk &#x2F;dev&#x2F;盘址<br>n<br>p<br>1<br>默认值<br>+5G</p>
+<p>重复上述<br>+1G两次分号三块主分区</p>
+<p>然后新建一块扩展分区<br>n<br>e 然后一路回车将所有空间全部分配给扩展分区<br>然后开始分配逻辑分区n 此时提示所有主分区都已经被使用,增添逻辑分区5,指定起始扇面<br>+4G<br>+1.5G</p>
+<p>lsblk确认分区情况<br>或者partprobe立刻重新获取分区表</p>
+<p>mkfs.ext4 &#x2F;dev&#x2F;sdb1<br>mkfx.xfs &#x2F;dev&#x2F;sdb5<br>vim &#x2F;etc&#x2F;fstab<br>mkdir &#x2F;mnt&#x2F;part{1,2}<br>&#x2F;dev&#x2F;sdb1 &#x2F;mnt&#x2F;part1 ext4 defaults 0 0<br>&#x2F;dev&#x2F;sdb5 &#x2F;mnt&#x2F;part2 xfs defaults 0 0<br>mount -a</p>
+<p>fdisk &#x2F;dev&#x2F;sda1<br>n<br>p<br>全部分配<br>n<br>e<br>全部分配<br>w</p>
+<p>partprobe刷新分区表<br>mkswap &#x2F;dev&#x2F;sda5<br>vim &#x2F;etc&#x2F;fstab<br>&#x2F;dev&#x2F;sda5 swap swap defaults 0 0<br>swapon -a<br>swapon -s</p>
+<p>vgcreate myvg &#x2F;dev&#x2F;sdb2 &#x2F;dev&#x2F;sdb6</p>
+<p>lvcreate -L 1G -n mylv myvg 在卷组myvg中创建逻辑卷mylv,指定大小为1G<br>mkfs.xfs &#x2F;dev&#x2F;myvg&#x2F;mylv<br>vim &#x2F;etc&#x2F;fstab<br>&#x2F;dev&#x2F;myvg&#x2F;mylv &#x2F;mnt&#x2F;lv101 xfs defaults 0 0<br>mkdir &#x2F;mnt&#x2F;lv101<br>mount -a</p>
+<p>lvextend -L 2140M &#x2F;dev&#x2F;myvg&#x2F;mylv 这里仅需写上需要扩大到的容量,不是需要多少空间用于扩容<br>xfs_growfs &#x2F;dev&#x2F;myvg&#x2F;mylv 增长文件系统大小</p>
+<p>rd.break console&#x3D;tty0<br>mount -o remount,rw &#x2F; &#x2F;sysroot<br>chroot &#x2F;sysroot<br>echo sj49a1 | passwd –stdin root<br>touch &#x2F;.autorelabel<br>exit reboot</p>
+<p>nmcli c m 网卡名称 ipv4.addresses “172.25.0.11&#x2F;24 172.25.0.254” ipv4.dns 172.25.0.254 ipv4.method manual ipv4.dns-search  connection.autoconnect yes<br>hostnamectl set-hostname server0.example.com</p>
+<p>rm -rf &#x2F;etc&#x2F;yum.repos.d&#x2F;*<br>vim &#x2F;etc&#x2F;yum.repos.d&#x2F;Download<br>[rhel]<br>name&#x3D;none for you<br>baseurl&#x3D;<br>enable&#x3D;1<br>gpgcheck&#x3D;0</p>
+<p>yum clean all<br>yum repolist<br>yum -y install sssd autofs</p>
+<p>fdisk<br>n<br>p<br>默认起始柱面<br>+5G<br>重复上述,将容量改为1G,1G<br>然后将剩下的全部分配给扩展分区<br>创建逻辑分区<br>n<br>+4G<br>n<br>+1536MB<br>wq<br>lsblk查看分区表</p>
+<p>mkfs.ext4 &#x2F;dev&#x2F;sdb1<br>mkfs.xfs &#x2F;dev&#x2F;sdb5</p>
+<p>mkdir &#x2F;mnt&#x2F;part{1,2}<br>vim &#x2F;etc&#x2F;fstab<br>&#x2F;dev&#x2F;sdb1 &#x2F;mnt&#x2F;part1 ext4 defaults 0 0<br>&#x2F;dev&#x2F;sdb5 &#x2F;mnt&#x2F;part2 xfs defaults 0 0<br>mount -a</p>
+<p>fdisk &#x2F;dev&#x2F;sda<br>n<br>e</p>
+<p>n<br>+512M</p>
+<p>partprobe<br>lsblk<br>mkswap &#x2F;dev&#x2F;sda5<br>vim &#x2F;etc&#x2F;fstab<br>&#x2F;dev&#x2F;sda5 swap swap defaults 0 0<br>swapon -a<br>swapon -s</p>
+<p>fdisk<br>vgcreate myvg &#x2F;dev&#x2F;sdb2 &#x2F;dev&#x2F;sdb6<br>vgs<br>lvcreate -L 1G -n mylv myvg<br>lvs<br>mkfs.xfs &#x2F;dev&#x2F;myvg&#x2F;mylv<br>vim &#x2F;etc&#x2F;fstab<br>mkdir &#x2F;mnt&#x2F;lv101<br>&#x2F;dev&#x2F;myvg&#x2F;mylv &#x2F;mnt&#x2F;lv101<br>lvextend -L 2140M &#x2F;dev&#x2F;myvg&#x2F;mylv<br>xfs_growfs &#x2F;dev&#x2F;mylv&#x2F;myvg</p>
+<p>vgchange -s 2M myvg</p>
+<p>linux防火墙:<br>RHEL7,8firewalld<br>老版本iptables</p>
+<p>管理工具firewall-cmd(命令)学习时间长,比图形方便,容错高<br>firewall-config(图形)使用简单,学习成本低,容错率低</p>
+<p>public:仅允许访问本机的ssh,dhcp,ping等少数几个服务<br>trusted:允许任何访问<br>block:阻塞任何来访请求,明确拒绝<br>drop:丢弃任何来访的数据包,直接丢弃<br>匹配即停原则,查询访问请求中源ip的地址,若有区域有真对该源ip的策略,则允许进入该区域.如果无则默认进入public</p>
+<p>防火墙操作:查看及修改防火墙默认区域:<br>查看:firewall-cmd -get-default-zone<br>修改:firewall-cmd -set-default-zone&#x3D;区域名称</p>
+<p>添加服务到区域,查看一个区域的详细信息<br>firewall-cmd –zone&#x3D;区域 -add-service&#x3D;服务名<br>在未输入服务名时按两下tab可以列出可支持的服务<br>firewall-cmd –zone-public –list-all<br>重载防火墙<br>firewall-cmd –reload</p>
+<p>永久配置(不能用于默认区域)<br>firewall-cmd –permanent(加这个选项)</p>
+<p>端口映射(转发)<br>firewall-cmd –permanent –zone&#x3D;public -add-forward-port&#x3D;port&#x3D;5423:proto&#x3D;tcp:toport&#x3D;80<br>对本地应用的端口请求重定向<br>源端口5423,协议tcp,目标端口80<br>对来自客户机访问端口1的请求自动映射到端口2处理</p>
+<p>firewall-cmd –permanent –zone&#x3D;public -add-forward-port&#x3D;port&#x3D;5423:proto&#x3D;tcp:toport&#x3D;80</p>
+<p>firewall-cmd –permanent –zone&#x3D;public -add-forward-port&#x3D;port&#x3D;8234:proto&#x3D;tcp:toport&#x3D;80</p>
+<p>端口号:用于表示服务或程序的编号(让访问的客户机能够找到服务器上对应的程序)</p>
+<p>端口范围是0~65535(2^16 -1)<br>程序的端口号可变,也允许一个服务或程序有多个端口号</p>
+<p>常见协议的默认端口号<br>http超文本传输协议:80,8080(java)<br>https安全的超文本传输协议:443<br>ftp文件传输协议:21<br>ssh远程链接:22<br>tftp简单地文件传输协议:69<br>dns域名解析协议:53<br>smtp发邮件协议:25<br>pop3收邮件协议:110</p>
+<p>selinux:一套增强系统安全的 强制 访问控制 体系<br>运行模式,关键在于强制性和访问控制<br>enforcing 强制<br>permissive 宽松<br>上述是启用状态下<br>disable 禁用</p>
+<p>强制:直接采用selinux的策略强制禁止认为不安全的行为<br>宽松:不会直接禁止,只会警告并记录到日志文件<br>禁用:啥都没有,策略也没有,日志也不记录</p>
+<p>切换模式:在启用状态下切换为强制或宽松为<br>setenforce 1&#x2F;0<br>查看当前模式:getenforce<br>如果将selinux从启用切换成禁用必须修改配置文件永久配置,重启后生效(启动时无法修改罢了)<br>vim &#x2F;etc&#x2F;selinux&#x2F;config</p>
+<p>firewall-cmd –permanent –zone&#x3D;public -add-forward-port&#x3D;8234:proto&#x3D;tcp:toport&#x3D;80<br>systemctl restart firewalld<br>systemctl status firewalld<br>firewall-cmd –zone&#x3D;public –list-all</p>
+<p>简单文件共享服务:NFS文件共享NetworkFileSystem网络共享服务<br>协议NFS,PRC<br>设置防火墙默认区域为trusted<br>客户端:classroom<br>服务端:server0<br>firewall-cmd set-defaults-zone&#x3D;trusted<br>yun-config-manager –add-repo<br>yum clean all<br>yum repolist<br>yum -y install nfs-utils<br>创建共享目录<br>mkdir&#x2F;nfs_share<br>echo “hello world” &gt; &#x2F;nfs_share&#x2F;test.txt 创建测试用文件</p>
+<p>修改配置文件<br>vim &#x2F;etc&#x2F;exports<br>&#x2F;nfs_share 172.25.0.254(ro)<br>systemctl restart nfs-server<br>systemctl enable nfs-server</p>
+<p>启动服务并设置服务开机自启<br>systemctl enable nfs-server<br>systemctl restart nfs-server</p>
+<p>mkdir &#x2F;nfs<br>vim etc&#x2F;fstab<br>ip地址:共享目录的路径 挂载点 文件系统类型(nfs) defaults,_ netdev 0 0</p>
+<p>ls &#x2F;nfs</p>
+<p>Samba:文件共享服务<br>适用范围:Windows和Linux的跨平台共享<br>协议:SMB,CIFS<br>为客户端提供共享使用的目录<br>环境:防火墙默认区域设置为trusted</p>
+<p>安装服务包<br>yum -y install samba<br>创建共享目录<br>mkdir &#x2F;smb_share<br>建立samba共享账号:专门用于验证samba共享服务的用户<br>建立samba账号前,需要建立一个同名系统用户,shell使用nologin,且不设置密码<br>samba共享账号采用独立的密码设置<br>pdbedit -a 用户名<br>然后设置密码 </p>
+<p>删除samba账号:pdbedit -x 用户名<br>查看所有samba账号<br>pdbedit -L<br>修改配置文件:&#x2F;etc&#x2F;samba&#x2F;smb.conf<br>[共享名称,挂载时使用]<br>path&#x3D;&#x2F;sam_share 共享目录的路径</p>
+<p>systemctl restart&#x2F;enable smb</p>
+<p>使用及管理KVM虚拟机<br>KVM基于系统内核的虚拟机<br>virt-manager 图形化虚拟机管理工具<br>virsh 字符界面虚拟机管理</p>
+<p>RHEL7自动安装<br>kickstart+PXE 服务器批量安装程序<br>PXE是服务器,与其他服务器之间通过网络进行连接.刚刚狗辉的服务器仅能通过DHCP分配地址,因为没有系统,无法通过其他方式赋予ip地址.所以PXE在此也可以称作是DHCP服务器<br>PXE这一部分包含DHCP协议 内核 驱动程序 菜单文件<br>在PXE与服务器之间还有TFTP服务,软件包(yum源)平时通过PXE服务器进行共享,可以通过很多种服务协议共享(http等)<br>装机时的自动配置文件称作应答文件,操作者可以提前写好以供装机使用<br>通过多种服务组合在一起装机称作PXE(Pre-boot execution Environment)预启动执行环境<br>PE(预启动环境),在操作系统之前运行<br>用于安装操作系统<br>ISO镜像:压缩包的一种格式</p>
+<p>PXE优点:批量,自动化,远程,不需要介质(这点很重要)<br>主机的网卡具有PXE功能,PXE客户端(pxe-client)<br>计算机一般设置为硬盘引导,但是出厂时为网卡引导.将客户端调用到内存中执行起来,通过该程序(pxe-client)与PXE服务器联系,开始装机</p>
+<p>工作模式:<br>网卡中集成了pxe-client客户端,当计算机进行引导时会从网卡中将pxe客户端调入内存中运行,此后pxe-client会获取pxeserver配置,显示菜单,根据应答文件完成装机</p>
+<p>服务组件:<br>DHCP:提供网络<br>TFTP:共享内核,引导,驱动<br>HTTP&#x2F;FTP&#x2F;NFS:提供yum源和应答文件</p>
+<p>CE环境介绍<br>classroom:考官,讲师机器,提供必要服务,需先开此台<br>server0:服务端<br>desktop0:客户端</p>
+<p>准备工作:<br>配置Ipv4地址,同网段之间的通信无序网关,也不需要DNS<br>nmcli c m eth0 ipv4.method manual ipv4.addresses ip地址 connection.autoconnect yes<br>启动网卡nmcli connection up eth0<br>物理机去网络中心中设置VMware虚拟网卡的高级TCP&#x2F;IP属性,使其和虚拟机设置的ip地址相同<br>关闭防火墙,然后就可以进行连接了<br>systemctl stop firewalld<br>systemctl disable firewalld<br>ssh ip地址<br>修改主机名<br>hostnamectl set-hostname 主机名</p>
+<p>配置yum源<br>ssh root@主机ip地址<br>fstab中可以查看到仓库的挂载地址,通过xshell的sz命令可以将其导出到本地<br>sz 地址<br>然后在虚拟机的光驱中选中ISO映像文件<br>iso文件并不能直接作为yum源,必须导出后才可以<br>设备状态勾选已连接和启动时连接</p>
+<p>放入光盘映像<br>挂在光盘<br>mkdir &#x2F;dvd 创建挂载点<br>&#x2F;dev&#x2F;cdrom &#x2F;dvd iso9660 defaults 0 0<br>mount -a<br>ls &#x2F;dvd&#x2F; 即可查看到光盘内的内容</p>
+<p>yum-config-manager或者直接vim &#x2F;etc&#x2F;yum.repo.d&#x2F;文件名<br>[rhe17]<br>name<br>baseurl&#x3D;file:&#x2F;&#x2F;&#x2F;dvd    file在此处为本地文件协议<br>enabled&#x3D;1<br>gpgcheck&#x3D;0</p>
+<p>yum clean all<br>yum repolist<br>修改配置文件<br>subnet网段  192.168.4.0 netmask子网掩码     255.255.255.0<br>{<br>range IP地址的分配范围,此处为100~200   192.168.4.100   192.168.4.200;<br>default-lease-time默认超时时间              600;<br>max-lease-time最大超时时间                  7200;<br>next-server     192.168.4.7;	执行下一个IP地址<br>filename    “pxelinux.0”;		指定网卡引导文件名称<br>}<br>最后两行如果不配置pxe服务器可以不要<br>next-server是告诉客户机pxe服务器在哪里<br>filename告诉客户机网络装机的配置文件名称,是二进制文件,指定服务器自动完成装机<br>安装一个软件包以获取引导文件</p>
+<p>vim &#x2F;etc&#x2F;dhcp&#x2F;dhcpd.conf写入上述配置<br>systemctl restart dhcpd<br>systemctl enable dhcpd</p>
+<p>创建一台空白虚拟机<br>VMware Workstation新建虚拟机<br>自定义<br>稍后安装操作系统<br>客户机操作系统选择Linux,版本选择red hat enterprise Linux 7 64位<br>之后自定义即可<br>网络类型选择仅主机网络<br>之后默认即可</p>
+<p>测试DHCP<br>VMware的虚拟机默认为PXE启动,启动后测试是否能自动获取DHCP服务<br>如果未能拉起,执行systemctl status dhcpd 查看服务状态是否为active,然后重启客户机重新获取DHCP</p>
+<p>搭建tftp服务<br>安装软件包:<br>yum -y install tftp*  一键安装tftp的所有软件包</p>
+<p>修改配置文件<br>vim &#x2F;etc&#x2F;xinetd.d&#x2F;tftp<br>将disable改为no<br>systemctl restart xinetd.service 重启服务,该服务默认自启,也可以自行添加自启</p>
+<p>默认共享路径:&#x2F;var&#x2F;lib&#x2F;tftpboot</p>
+<p>获取pxelinux.0</p>
+<p>which ifconfig查询命令本体的文件路径<br>yum provides &#x2F;路径  查询是哪个软件包提供了这个命令&#x2F;文件,如果不知道要查找的是命令还是文件,可以*&#x2F;文件名.</p>
+<p>yum provides *&#x2F;pxelinux.0<br>查询哪个软件包提供了该文件<br>是由syslinux-4.05-8.e17.x86_64提供的<br>同时下方的filename也会写出其软件包文件的存放地址</p>
+<p>yum -y install syslinux安装此软件包<br>ls filename的路径查看是否有该文件</p>
+<p>部署预执行文件<br>cp 预执行文件的路径 共享路径(&#x2F;var&#x2F;lib&#x2F;tftpboot)</p>
+<p>部署菜单文件:<br>install和test镜像的文件,默认是测试镜像文件,但是一般情况下都需要install镜像<br>一般情况下预执行文件中规定了存放路径存放在默认共享路径下<br>菜单文件存放路径:&#x2F;var&#x2F;lib&#x2F;tftpboot&#x2F;pxelinux.cfg<br>命名必须为default</p>
+<p>从光盘中部署菜单文件到指定位置<br>ls &#x2F;dvd&#x2F;isolinux&#x2F; 即可查找到菜单文件(该目录下的isolinux.cfg)<br>cp 菜单文件 指定位置,并重命名为default<br>ls -l查询是否成功<br>该文件默认只读,需要添加可写权限<br>chmod 666 文件或者chmod u+w 文件</p>
+<p>验证:启动待安装虚拟机,查看是否可以连接上TFTP并且获取菜单文件(OK) 此时还未部署镜像文件,除了could not find kernel image之外,boot:也是空的</p>
+<p>部署文件可以通过通配符部署,也可以<br>cp &#x2F;dvd&#x2F;isolinux&#x2F;{vesamenu.c32,splash.png,vmlinuz,initrd.img} &#x2F;var&#x2F;lib&#x2F;tftpboot<br>部署菜单图形模块,背景图片,启动内核,驱动程序<br>少一样都报错<br>此时可以ls &#x2F;var&#x2F;lib&#x2F;tftpboot&#x2F; 与ls &#x2F;var&#x2F;lib&#x2F;tftpboot&#x2F;pxelinux.cfg&#x2F;查看文件是否全部部署完毕</p>
+<p>修改菜单文件:<br>vim &#x2F;var&#x2F;lib&#x2F;tftpboot&#x2F;pxelinux.cfg&#x2F;default<br>第二行的timeout超时时间改为60<br>第11行的menu title 可以随意改为别的<br>65gg切换到第65行<br>100dd删除100<del>65行所有的内容,再修改61</del>65行<br>62行为菜单第一行的内容,可以改为自己想要的样式<br>63行添加menu default使其拥有倒计时,并指定菜单文件<br>65行改为append initrd&#x3D;initrd.img 使用指定驱动程序</p>
+<p>DHCP:IP地址,next-server,pxelinux.0 为此三样操劳<br>TFTP:pxelinux.0 简单传输此文件<br>pxelinux.0:&#x2F;var&#x2F;lib&#x2F;tftpboot&#x2F;pxelinux.cfg&#x2F;default 仅能存放于此<br>default:vesamenu.c32,splash.png,vmlinuz,initrd.img<br>然后初步验证即可</p>
+<p>部署HTTP服务,共享光盘的YUM源<br>安装http服务的软件包<br>yum -y install httpd</p>
+<p>将光盘挂载到http的默认网页文件目录(光盘内容以网页的文件形式共享)<br>在网页文件目录建立挂载点<br>mkdir &#x2F;var&#x2F;www&#x2F;html&#x2F;rhe17<br>fstab输入<br>&#x2F;dev&#x2F;cdrom &#x2F;var&#x2F;www&#x2F;html&#x2F;rhe17 iso9660 defaults 0 0</p>
+<p>卸载原有的光驱挂载 umount &#x2F;dev&#x2F;cdrom<br>重新挂载到新的挂载点mount -a</p>
+<p>重启httpd服务并设置开机自启</p>
+<p>生成应答文件<br>修复yum源(之前的路径已经空了)<br>file:&#x2F;&#x2F;&#x2F;var&#x2F;www&#x2F;html&#x2F;rhel7<br>安装辅助图形工具<br>yum -y install system-config-kickstart.noarch<br>system-config-kickstart启动图形工具<br>export LANG&#x3D;zh_CN.UTF-8) 可以将系统语言临时切换为中文</p>
+<p>图形工具中软件包可能会提示下载信息失败,软件包选择被禁止<br>此时打开yum源,将仓库名改为development即可解决此bug</p>
+<p>时区可改<br>根密码:root管理员密码<br>确认密码<br>加密随意<br>安装后重新引导系统<br>可以勾选在文本模式中执行安装</p>
+<p>安装方法改为HTTP共享,HTTP服务器写IP地址即可<br>HTTP目录写子目录名称即可,完整路径出错</p>
+<p>安装新引导装载程序</p>
+<p>清除主引导记录<br>删除所有现存分区<br>初始化硬盘标签<br>可添加交换分区防止安装过程中内存不足</p>
+<p>网络配置添加一个配置,一切默认即可</p>
+<p>验证默认</p>
+<p>防火墙禁用<br>安全级别禁用防火墙</p>
+<p>显示配置默认</p>
+<p>软件包选择基本即可,别的也行</p>
+<p>后两项空即可</p>
+<p>操作完成后左上角保存到&#x2F;root  </p>
+<p>vim &#x2F;root&#x2F;ks.cfg即可查看应答文件</p>
+<p>通过http服务共享kickstart文件<br>cp &#x2F;root&#x2F;ks.cfg &#x2F;var&#x2F;www&#x2F;html&#x2F;</p>
+<p>vim &#x2F;var&#x2F;lib&#x2F;tftpboot&#x2F;pxelinux.cfg&#x2F;default</p>
+<p>在最后一行的同行空格ks&#x3D;<a target="_blank" rel="noopener" href="http://192.168.4.7/ks.cfg">http://192.168.4.7/ks.cfg</a><br>将ks的连接低脂写到配置文件中</p>
+<p>通过DHCP配置了ip地址,next-server,filename,”pxelinux.0”<br>tftp:共享了pxelinux.0<br>pxelinux.0:指定了菜单文件,必须存放在tftpboot共享目录下的pxelinux.cfg中<br>default:vesamenu.c32,splash.png,vmlinuz,initrd.img→ks.cfg<br>ks.cfg:时区,键盘,分区等装机预设<br>http:挂载光盘内容</p>
+<p>磁盘:数据的容器,空间巨大<br>分区:分类存放,便于查找<br>块存储:分类更精细,切块<br>文件系统格式:连续的扇区组成一个块,常见的4KB<br>一般每1&#x2F;2KB设置一个inode<br>DHCP的安装:<br>yum install -y dhcp<br>subnet网段  192.168.4.0 netmask子网掩码     255.255.255.0<br>{<br>range IP地址的分配范围,此处为100~200   192.168.4.100   192.168.4.200;<br>default-lease-time默认超时时间              600;<br>max-lease-time最大超时时间                  7200;<br>next-server     192.168.4.7;	执行下一个IP地址<br>filename    “pxelinux.0”;		指定网卡引导文件名称<br>}<br>tftp<br>将&#x2F;mnt&#x2F;iso&#x2F;isolinux下的vesamenu.c32;initrd.img;splash.png;vmlinuz拷贝到TFTP目录下<br>&#x2F;var&#x2F;lib&#x2F;tftpboot&#x2F;pexlinux.cfg&#x2F;default 菜单文件<br>vesamenu 图形模块<br>initrd 	 驱动程序<br>splash.png 	背景图片<br>vmlinuz  内核<br>pxelinux.0 	预处理文件<br>firewall-cmd –permanent –zone&#x3D;public</p>
+<p>系统管理高级设置sudo与ipv6&amp;team<br>系统权限管理<br>su [-] 用户名    快速切换用户,root切换无序密码,-可以切换到对方的环境<br>su - -c “命令” 用户名 	以某个用户的身份执行命令,无用户名则请求管理员权限<br>以普通用户的身份启动httpd服务<br>systemctl start httpd<br>仅验证完成,并未真正启动服务<br>sudo(Super or another Do)<br>作用:管理员可以为普通用户授予执行命令的许可</p>
+<p>实验准备:useradd tom<br>echo 123 | passwd –stdin tom<br>vim &#x2F;etc&#x2F;sudoers<br>用另外一种方式打开没有高亮显示<br>该文件默认为只读</p>
+<p>在用户root下方一行输入<br>tom ALL&#x3D;&#x2F;user&#x2F;bin&#x2F;systemctl * httpd,&#x2F;user&#x2F;bin&#x2F;vim &#x2F;etc&#x2F;httpd&#x2F;conf&#x2F;httpd.conf<br>用户 tom ,在 任何主机 上执行systemctl * httpd和vim httpd.conf 时拥有最高权限<br>此后执行这两个命令前带上sudo即可通过用户tom而非root用户的密码执行带有最高权限的命令</p>
+<p>sudo -l查看自己拥有的权限<br>提权时必须写上命令的绝对路径,可以使用which查询命令的本体文件在哪<br>which 命令1 命令2 命令3  连续查询多条命令<br>groupadd webadmin<br>useradd web1<br>useradd web2<br>gpasswd -a web1 webadmin<br>gpasswd -a web2 wdbadmin<br>再分别设置密码<br>vim &#x2F;etc&#x2F;sudoers<br>在%wheel下方即可添加组,组名前需要%,其他和用户提权差不多</p>
+<p>sudoers中有一些命令组,使用这些命令组等同于提权多条相关命令,使用前需要将命令组(别名)前面的#删除</p>
+<p>高级网络管理:<br>ipv6<br>128个二进制组成,以:分隔8部分<br>两台主机之间的通信需要IP地址,目前来说ipv4地址可用数岌岌可危,所以推出了ipv6<br>ipv4为32个二进制数,ipv6为128个<br>以:分隔8部分,4个16进制表示每段内连续的前置0可省略,连续的多个:可简化为::<br>例如:<br>2008:ac18:0000:0000:0000:0000:0000:0305&#x2F;64<br>2008:ac18::0305&#x2F;64</p>
+<p>nmcli n m eth0 ipv6.addresses 2008:ac18::305&#x2F;64 ipv6.method manual connection.autoconnect yes<br>nmcli n m eth0 nat 192.168.0.0&#x2F;24</p>
+<p>ipv6对内外网的划分没有ipv4严格<br>nat可以转换内外网ip地址,此时映射出去的IP地址为ip段:端口<br>ifconfig查询网卡信息,ipv6地址可以通过ping6查看是否配置成功,直接ping不通<br>ping -c 4 ipv6地址<br>发送四个包后停止ping</p>
+<p>网卡链路聚合(聚合链路,网卡绑定,网卡桥,聚合连接)<br>防止其中一张网卡因为特殊原因而无法正常工作<br>将两张物理网卡绑到一起成为一张逻辑网卡(team)<br>在客户端眼中是一张网卡<br>链路聚合有两种模式:<br>热备份(activebackup):在骨干网设备连接中,单一链路的连接很容易实现,但一个简单的故障就会造成网络的中断.因此在实际网络组建的过程中,为了保持网络的稳定性,在多台 交换机 组成的网络环境中,通常都使用一些备份连接,以提高网络的健壮性、稳定性. 这里的备份连接也称为备份链路或者冗余链路.备份链路之间的交换机经常互相连接,形成一个环路,通过环路可以在一定程度上实现冗余.<br>轮询式(roundrobin):流量负载均衡,轮流询问主机实际地址</p>
+<p>nmcli connection add type team  con-name team0 ifname team0 config ‘{“runner:{“name”:activebackup}}’</p>
+<p>nmcli c add type team<br>con-name team0 ifname team0<br>config ‘{“runner”:{“name:activebackup”}}’ 配置类型</p>
+<p>更改ipv6后主机名可能消失</p>
+<p>nmcli c add type team<br>con-name team0<br>ifname team0<br>autoconnect yes<br>config ‘{“runner”:{“name”:”activebackup”}}’<br>nmcli c 添加 类型 team<br>配置文件名:config name:team0<br>虚拟网卡接口名:team0<br>设置开机自启<br>链路聚合的工作模式:热备份</p>
+<p>如果打错需要nmcli c delete team0<br>将物理网卡添入team0组<br>nmlic connection add type team-slave con-name team0-1 ifname eth1 master team0<br>接口名称要写实际网卡名</p>
+<p>nmcli c add type team ifname team0 con-name team0 config ‘{“runner”:{“name”:activebackup}}’<br>nmcli 连接 添加 类型 链路聚合 接口名称 team0 连接名称 team0 配置 热备份配置</p>
+<p>nmcli c add type team-slave con-name team0-1 ifname eth1 master team0<br>nmcli 连接 添加 类型 组成员 连接名称 team0-1 接口名 eth1(实际存在的物理网卡接口名) 组名 team0</p>
+<p>为链路聚合的网卡配置ip地址时,输入的不是单张网卡名而是组名<br>nmcli c m team0 ipve.method manual ipv4.addresses 192.168.1.1&#x2F;24 connection.autoconnect yes<br>nmcli c m team0-1<br>设置网卡组成员开机自动连接:<br>nmcli c m team0-1 connection.autoconnect yes<br>nmcli c m team0-w connection.autoconnect yes<br>激活网卡组<br>nmcli connection up team0<br>验证:ifconfig team0<br>teamdctl team0 state<br>每张网卡的link理应为up状态,同时活跃中的网卡会随机选出一张作为主网卡<br>ifdown&#x2F;ifconfig eth1 down<br>此时会将网卡1停止,另一张卡成为主网卡,此时若eth1恢复,那么仍处于备用网卡,主网卡是eth2<br>ifconfig eth2 up<br>teamdctl team0 state</p>
+<p>服务器搭建:<br>邮箱服务:<br>基础邮件服务使用<br>SMTP发邮件协议,默认端口25<br>pop3收邮件协议,默认端口110<br>异域邮件经过dns解析得到IP地址,根据ip地址找到服务器,然后转发给其他邮箱</p>
+<p>构建邮件服务器:<br>server0作为服务端<br>安装yum -y install postfix<br>vim &#x2F;etc&#x2F;postfix&#x2F;main.cf<br>set nu<br>99行#myorigin&#x3D; $mydomain 改为 myorigin&#x3D;server0.example.com<br>此时本域就变成了server0.example.com<br>指定本域域名后,会自动补全邮箱后缀</p>
+<p>116行将inet_interfaces &#x3D; localhost 改为 inet_interfaces all  开放本机所有网络接口供邮件服务使用<br>164 全删,改为mydestination &#x3D; server0.example.com<br>指定本域域名</p>
+<p>重启服务<br>systemctl restart postfix.service<br>systemctl enable postfix.service</p>
+<p>本机验证<br>useradd yg<br>useradd xln</p>
+<p>发送邮件<br>mail发信<br>mail -s ‘标题’ -r 发件人 收件人    这是一个交互式命令,回车后即可输入正文内容<br>正文编辑完成后,另起一行使用单独的句号.才能使用回车结束编辑<br>EOT</p>
+<p>查看邮件:<br>mail -u xln<br>然后输入1即可查看第一条邮件<br>输入q或者quit退出查看</p>
+<p>非交互式发件:<br>echo 邮件正文内容 | mail -s ‘标题’ -r 发件人 收件人</p>
+<p>搭建及管理ftp服务器<br>配置ftp<br>安装软件包vsftpd<br>yum -y install vsftpd<br>重启和开机自启vsftpd服务</p>
+<p>vsftpd默认共享路径:<br>&#x2F;var&#x2F;ftp&#x2F;   	默认有一个pub目录,这只是一个子目录,不能共享<br>mkdir &#x2F;var&#x2F;ftp&#x2F;rhel17<br>将光盘内部挂载到ftp默认共享目录<br>vim &#x2F;etc&#x2F;fstab<br>&#x2F;dev&#x2F;cdrom &#x2F;var&#x2F;ftp&#x2F;rhel7 iso9660 defaults 0 0<br>mount -a<br>此时可以用光盘内容配置yum源<br>rm -rf &#x2F;etc&#x2F;yum.repos.d&#x2F;*<br>新建一个yum源<br>[rhel7]<br>name&#x3D;<br>baseurl&#x3D;<a href="ftp://172.25.0.11/rhel7">ftp://172.25.0.11/rhel7</a>    ip写的是server0的地址<br>enable&#x3D;1<br>gpgcheck&#x3D;0<br>下载ftp包<br>登录方式有:<br>浏览器访问IP<br>文件夹左侧Connect to server<br>还有命令行下载ftp包后登录<br>yum -y install ftp<br>ftp ip地址<br>ftp 172.25.0.11<br>Anonymous  	匿名登录</p>
+<p>命令行下可以输入get 文件名<br>并不支持输入路径<br>ls<br>cd rhel7<br>ls<br>cd isolinux<br>ls<br>get 文件名  下载路径在终端当前位置</p>
+<p>在ftp中切换终端当前目录时使用<br>lcd 路径<br>quit退出</p>
+<p>vsftpd共享路径默认在&#x2F;var&#x2F;ftp</p>
+<p>开启ftp的上传功能<br>Anonymous登录<br>空密码直接回车即可<br>put 当前目录下的文件即可上传</p>
+<p>上传失败时,可以查看配置文件<br>vim &#x2F;etc&#x2F;vsftpd&#x2F;vsftpd.conf</p>
+<p>其中找到上传配置项和创建文件配置项<br>anon_upload_enable&#x3D;YES<br>anon_mkdir_write_enable&#x3D;YES<br>listen_ipv6&#x3D;NO<br>chmod o+w &#x2F;var&#x2F;ftp&#x2F;pub<br>默认是被注释的,解除后即可上传</p>
+<p>修改任何配置文件后必须重启服务才可生效<br>配置文件中会提示selinux可能会拦截文件上传<br>如果防火墙未关闭,也无法正常上传文件<br>亦或者是文件夹权限不足</p>
+<p>setenforce 0</p>
+<p>逻辑卷(LVM)管理:<br>动态对分区进行扩缩空间大小<br>整合分散的空间</p>
+<p>将众多物理卷PV组成卷组VG,再从卷组中划分逻辑卷LV<br>PE物理扩展:充当物理卷上最小存储块的小块数据<br>PV物理卷:用于注册地基础物理设备,以便在卷组中使用<br>VG卷组:由一个或多个物理卷组成,相当于存储池<br>LV逻辑卷:根据卷组中的空闲物理范围创建,提供应用,用户和操作系统所使用的存储设备</p>
+<p>管理逻辑卷:<br>建立LVM分区</p>
+<p>检查物理设备,创建新分区<br>lsblk<br>fdisk &#x2F;dev&#x2F;sdb<br>m获取帮助,p打印现有分区,n创建,t更改分区类型,w写入更改,q退出</p>
+<p>创建物理卷(非必须)<br>命令格式:pvcreate 闲置分区路径</p>
+<p>创建卷组:vgcreate 卷组名称 限制分区路径<br>查看卷组信息:vgs<br>实际创建出来的卷组空间可能比设定卷组小,因为PE的存在</p>
+<p>SSH全称secure shell protocol,专门为远程登录回话和其他网络安全服务提供的安全性协议<br>客户机发送连接请求给服务器<br>服务器发送公钥给客户机<br>客户机用服务器密码将公钥加密并发送<br>服务器用密钥解密并从而验证身份</p>
+<p>服务器搭建之NFS与SMB<br>NFS共享,Linux&amp;Linux之间的共享<br>Network File System网络文件系统<br>为客户机提供共享使用的文件夹<br>协议:NFS,PRC 都是用TCP&#x2F;UDP协议 前者UDP2049,后者UDP111</p>
+<p>文件系统类型:<br>本地文件系统:ext3&#x2F;4,xfs,swap,ntfs 	本地磁盘<br>伪文件系统:&#x2F;proc,&#x2F;sys 				内存空间<br>网络文件系统:NFS  					网络存储空间</p>
+<p>一台客户端上可以挂载多台不同系统的存储空间<br>但是不能将同一个文件拆分储存<br>分布式存储可以解决该问题<br>分布式存储可以跨地域,一份数据存储到多个空间.通过哈希算法将数据存放在多台服务器中,当一台服务器出错时,其他服务器仍可使用.拆分后的文件存储也更快</p>
+<p>服务端:<br>安装软件包<br>yum -y install nfs-utils 		在练习环境下默认已安装</p>
+<p>配置<br>创建共享目录<br>mkdir &#x2F;nfs0<br>修改配置文件<br>vim &#x2F;etc&#x2F;exports<br>&#x2F;nfs0 *(ro)</p>
+<p>重启服务,设置开机自启<br>systemctl restart nfs-server<br>systemctl enable nfs-server</p>
+<p>客户端:<br>mkdir &#x2F;nfs_mount0 	创建挂载点<br>vim &#x2F;etc&#x2F;fstab 		<br>172.25.0.11:&#x2F;nfs0 &#x2F;nfs_mount0 NFS defaults 0 0<br>网络设备的IP地址:&#x2F;网络目录<br>mount -a</p>
+<p>检验:<br>df -h &#x2F;nfs_mount0</p>
+<p>保护NFS文件共享<br>默认情况下,NFS不需要身份验证<br>krb5p可保障文件系统安全<br>krb5p生成密钥对,公钥在服务器端,私钥在客户端,当客户端访问服务端请求文件传输等操作时,通过公私钥的配对即可自动验证,无需用户多次输入<br>公钥和密钥都是随机字符<br>在数据传输时会附加校验码,一般为md5加密,防止数据在传输过程中被篡改</p>
+<p>在server0配置nfs服务<br>以只读方式共享目录&#x2F;public<br>读写方式共享&#x2F;protected<br>访问&#x2F;protected需要通过kerberos安全加密<br>使用指定URL提供的密钥<br>目录?protected包含名为project拥有人为ldapuser0的子目录<br>用户ldapuser0仅能以读写方式访问&#x2F;protected&#x2F;project</p>
+<p>安装软件包 yum -y install nfs-utils<br>mkdir -p &#x2F;public &#x2F;protected&#x2F;project 多级创建需要-p<br>ls -ld &#x2F;protected&#x2F;project&#x2F;<br>chown ldapuser0 &#x2F;protected&#x2F;project</p>
+<p>su ldapuser0<br>exit</p>
+<p>vim &#x2F;etc&#x2F;exports<br>&#x2F;public 	*(ro)<br>&#x2F;protected 	*(rw,sec&#x3D;krb5p)<br>下载证书到指定路径并命名<br>wget -O &#x2F;etc&#x2F;krb5.keytab 地址<br>-O用于修改路径与名<br>置开机自启<br>systemctl restart nfs-server nfs-secure-server<br>重启nfs服务与安全服务</p>
+<p>echo $? 查看上一个输出是否报错</p>
+<p>创建挂载点:<br>mkdir &#x2F;mnt&#x2F;nfsmount &#x2F;mnt&#x2F;nfssecure<br>下载证书<br>wget -O &#x2F;etc&#x2F;krb5.keytab 地址</p>
+<p>systemctl restart nfs-secure 在客户端重启管理证书安全的服务,后面不需要server<br>systemctl enable nfs-secure</p>
+<p>查看可访问的NFS服务<br>showmount -e ip</p>
+<p>设置开机自动挂载<br>域名:&#x2F;public &#x2F;mnt&#x2F;nfsmount nfs defaults,_netdev 0 0<br>域名:&#x2F;protected &#x2F;mnt&#x2F;nfssecure nfs defaults,_netdev,sec&#x3D;krb5p 0 0<br>mount -a<br>df -h 路径 查看挂载是否成功</p>
+<p>登录需要ssh ldapuser0@desktop0<br>以ldapuser用户的身份登录desktop0<br>输入密码</p>
+<p>chmod o+w &#x2F;protected&#x2F;</p>
+<p>服务搭建之samba<br>也是一种文件类型</p>
+<p>安装软件包<br>yum -y install samba<br>创建共享目录<br>mkdir &#x2F;smb0<br>创建samba账号<br>useradd -s &#x2F;sbin&#x2F;nologin tom<br>pdbedit -a tom<br>修改配置文件<br>vim &#x2F;etc&#x2F;samba&#x2F;smb.conf</p>
+<p>shift+G或者慢慢转至尾行<br>新增<br>[zhyx] 	配置项标志名<br>path &#x3D; &#x2F;smb0 共享目录路径<br>write list &#x3D; tom   为服务添加可写用户列表<br>重启服务并设置开机自启<br>systemctl restart smb<br>systemctl enable smb</p>
+<p>若报错需查看当前登录的用户是否正确<br>安装支持cifs文件系统的软件包<br>yum -y install cifs-utils<br>创建挂载点<br>mkdir &#x2F;smb_mount 0<br>设置开机自动挂载<br>&#x2F;&#x2F;server0.example.com&#x2F;zhyx &#x2F;smb_mount cifs defaults,_netdev,username&#x3D;tom,password&#x3D;123 0 0<br>&#x2F;&#x2F;域名:&#x2F;共享名称 &#x2F;挂载点 文件类型<br>mount -a<br>systemctl stop firewalld<br>echo 123 &gt; &#x2F;sab0&#x2F;101.txt<br>cat &#x2F;smb_mount0&#x2F;101.txt</p>
+<p>修改服务,使samba可写<br>selinux,文件权限,samba可写 需要验证此三样<br>setenforce 0  	需要设置宽松或者修改selinux的samba服务的波尔值<br>波尔值是一些权限的开关,一般开关为1&#x2F;0.<br>对于一个配置项,仅有两种情况(开关),此时称作波尔项<br>getsebool -a | grep samba<br>将export相关参数打开(rw)即可<br>setsebool -P samba_export_all_rw on<br>-P使其变为永久更改<br>setfacl -m u:tom:rwx &#x2F;smb0&#x2F;  </p>
+<p>配置多用户的samba服务器<br>针对同一个共享目录使不同的用户拥有不同的访问权限<br>要求共享名为devops<br>共享目录devops可以被浏览<br>用户kenji能以度的方式访问共享<br>用户chihiro能以读写方式访问共享</p>
+<p>useradd -s &#x2F;sbin&#x2F;nologin 用户<br>pdbedit -a 用户名<br>重启服务设置开机自启<br>systemctl restart smb<br>systemctl enable smb<br>设置selinux的波尔值<br>getsebool -a | grep samba<br>setsebool -P samba_export_all_rw on<br>给用户赋予读写执行权限acl<br>setfacl -m u:chihiro:rwx &#x2F;devops</p>
+<p>客户端:<br>创建挂载点:<br>mkdir &#x2F;mnt&#x2F;dev</p>
+<p>安装支持cifs文件系统的软件包<br>yum -y install cifs-utils</p>
+<p>设置开机自动挂载<br>vim &#x2F;etc&#x2F;fstab<br>&#x2F;&#x2F;server0.example.com&#x2F;devops &#x2F;mnt&#x2F;dev cifs defaults,_netdev,username&#x3D;用户名,password&#x3D;密码,multiuser,sec&#x3D;ntlmssp 0 0<br>mount -a<br>cifscred add -u chihiro server0 使一名用户临时拥有权限</p>
+<p>服务器搭建:<br>MariaDB数据库<br>数据库是一些数据的集合,一般是存放关系型数据的表格<br>关系型数据:表格中同一行具有一定关联<br>数据库管理系统DBMS:用于操作和管理数据库的大型软件平台<br>优点:可以快速检索数据</p>
+<p>常见的关系型DBMS:<br>甲骨文:MySQL,Oracle<br>微软:SQL Server<br>IBM:DB2<br>社区开源:MariaDB</p>
+<p>shell<br>cat &#x2F;etc&#x2F;shells 查看系统支持的shell版本<br>echo $SHELL  查看用户的默认shell<br>echo $0 查看当前系统的默认shell<br>通常情况下带有.sh后缀的为脚本文件,没带的也可能是,但不能直观的看出来<br>bash shell脚本的第一行以#!开头,表示文件是可执行的shell脚本.#!后跟命令解释器,告诉操作系统脚本解释器是&#x2F;bin&#x2F;bash.由于bash shell脚本由shell解释,因此开头是#! &#x2F;bin&#x2F;bash<br>执行脚本的方法:<br>当前目录下输入.&#x2F;脚本名<br>或者输入绝对路径</p>
+<p>也可以bash&#x2F;sh&#x2F;source 脚本.sh<br>source等效于.&#x2F;脚本.sh</p>
+<p>脚本:一个可执行的可以实现某种预设功能的文本文件<br>脚本文件命名:自定义.sh<br>可以不加,但是代码无高亮,同时也难以直观的看出这是脚本<br>加上#!&#x2F;bin&#x2F;bash后再进入则会代码高亮,此时系统识别出这是一个脚本<br>声明环境:#! &#x2F;bin&#x2F;bash<br>必要的注释:#注释<br>可执行代码:(逻辑+命令结构)</p>
+<p>shell脚本编码常用工具:<br>|将前方命令的结果交由后方的命令进行二次处理<br>输出重定向:</p>
+<blockquote>
+<p>覆盖,只收集正确输出</p>
+<blockquote>
+<p>追加<br>2&gt;:只收集错误输出<br>&amp;&gt;:收集正确和错误输出<br>黑洞设备:&#x2F;dev&#x2F;null   粉碎输出结果<br>当shell脚本中执行的命令时不想要的输出结果,可以使用重定向将输出结果重定向到黑洞设备<br>整数运算:&amp;[+-*&#x2F;%],仅支持整数运算,&#x2F;向下取整,%取余<br>取消字符的特殊意义(转义)<br>echo $LANG 输出为语言+编码格式<br>echo ‘$LANG’  此时取消了$的特殊含义,输出仅为$LANG<br>或者使用:取消后方一个字符的特殊含义<br>$LANG2 → $LANG2<br>$LANG\2 → 语言,编码格式2<br>将2分离出整体</p>
+</blockquote>
+</blockquote>
+<p>为变量赋值<br>变量名&#x3D;$(命令)<br>echo $变量名 即可输出结果<br>也可以a&#x3D;’内容’进行赋值,什么都不加则将变量值清空</p>
+<p>变量:以不变的名称存放可变的值<br>查看变量值:echo $变量名 或 echo $(),有时无法直接识别,所以需要()<br>例如echo $LANG2,此时就无法正确输出语言格式变量<br>变量名仅能以字母,数字,下滑线组成,严格区分大小写,不能以数字开头(系统自带变量除外)</p>
+<p>四大类变量:<br>自定义变量:用户自主设置,修改及使用<br>环境变量:系统定义并赋值,用户可以直接调用(常见:$USER,$LANG,$PATH,&amp;HOME,$RANDOM)<br>$PATH 表示系统执行命令时的搜索路径<br>$RANDOM 获取随机数<br>如果想要自定义一条命令,可以将自己写的脚本存放至$PATH的搜索路径下<br>位置变量:由系统定义并赋值,用户可以直接调用<br>作用:执行脚本时可以用作参数<br>脚本中写上yum -y install $1<br>脚本 httpd sssd则可以安装httpd,$1表示后跟随的第几个参数,此处仅使用第一个参数httpd.<br>多参数$1,$2,$3…$(10),二位数及以上必须使用()括起来<br>预定义变量:由系统定义并赋值,用户可直接调用<br>$?:程序或脚本退出后的状态值,默认为0,表示正常退出,非0为异常状态<br>$#:表示已加载的位置变量个数<br>$*:列出所有位置变量的值</p>
+<p>exit 数字,即可自定义退出脚本时的返回值.一般报错的情况下才会从exit退出,此时即可通过返回值知晓错误位置</p>
+<p>read:获取一个从键盘上输入的值,将其赋予给一个变量<br>用户创建脚本:<br>#! &#x2F;bin&#x2F;bash<br>echo ‘开始创建新用户’<br>read -p ‘请输入用户名:’ username<br>useradd $username<br>echo ‘用户创建成功,用户名为$username’<br>read -p ‘请输入用户密码:’ userpassword<br>echo $userpassword | passwd –stdin $username<br>最后一句输出完后会提示passwd的输出信息,如果不希望passwd在设置密码后有输出信息,可以将信息重定向到null上,追加 &amp;&gt; &#x2F;dev&#x2F;null</p>
+<p>无交互创建用户脚本:<br>#!<br>echo &lt;创建用户脚本&gt;<br>[$# -ne 2] &amp;&amp; echo ‘error:使用格式:u.sh 用户名 密码’ &amp;&amp;exit 1<br>id $1 &amp;&gt;&#x2F;dev&#x2F;null<br>[$? -ne 0]$$ echo 用户已存在 $$ echo 请重新创建 &amp;&amp; exit 2<br>useradd $1<br>echo $2 | passwd –stdin $1 $&gt; &#x2F;dev&#x2F;null<br>[$? -eq 0] &amp;&amp; echo 用户创建成功</p>
+<p>上述首先判断参数个数是否为2,不是则报错同时返回退出值1<br>然后查询id $1是否存在,存在时则会返回值0,然后进入$?的返回值判断是否为0,不是则报错并输出错误值2<br>然后正式开始创建用户,并修改密码</p>
+<p>条件测试及选择判断<br>[条件测试表达式]<br>每一个部分都要有空格隔开<br>检查文件状态<br>-e 文档存在为真<br>-d 目录存在为真<br>-f 文件存在为真<br>-r 存在文档且有读权限为真<br>-w 存在文档且有写权限为真<br>-x 存在文档且有执行权限为真</p>
+<p>例如:[-x &#x2F;root&#x2F;user.sh] &amp;&amp; echo yes || echo no</p>
+<p>比较整数大小,不可以比较分数(小数),否则报错<br>-eq &#x3D;<br>-ne !&#x3D;<br>-gt &gt;<br>-ge &gt;&#x3D;<br>-lt &lt;<br>-le &lt;&#x3D;</p>
+<p>e或eq 	等于<br>no 		不<br>than 	比<br>g 		大<br>l 		小</p>
+<p>字符串对比:<br>&#x3D;&#x3D; 		相同为真<br>&#x3D;!		不同为真</p>
+<p>||:默认输出左边内容,在条件判断中得到的结果为false时输出右边内容<br>在条件判断语句前加!代表对表达式的结果取反</p>
+<p>$RANDOM获取的随机数范围为0<del>99999<br>随机输出一个0</del>99的数为echo $[RANDOM%100]</p>
+<blockquote>
+<p>&amp;2:将echo的输出重定向为一个报错信息,可以通过2&gt;错误输出重定向识别到的报错信息,例如echo ‘error:用户已存在’ &gt;&amp;2</p>
+</blockquote>
+<p>逻辑结构<br>if判断:双分支与多分支<br>双分支:<br>    if[条件测试表达式];then<br>        命令序列1<br>    else<br>        命令序列2<br>    fi<br>当然,也可以嵌套使用,但要注意加fi<br>多分支:<br>    if[];then<br>        命令<br>    elif [];then<br>     	命令<br>     	else<br>     fi<br>for循环<br>    for 变量名 in 值列表<br>    do<br>    命令序列<br>    done</p>
+<pre><code class="hljs">for username in tom1 tom2 tom3 tom4
+do
+    useradd $username
+    [ $? - eq 0] &amp;&amp; echo &quot;create user&quot;$username&quot;success!&quot;
+done
+
+for username in &#39;cat ./username.txt&#39;  此时会将文件中每行的输出作为值
+也可以for username in $(cat ./username.txt)
+</code></pre>
+<p>造数:{1..10}表示1到10<br>     seq n 表示1到n</p>
+<p>脚本例题:输出9x9乘法表<br>    #!&#x2F;bin&#x2F;bash<br>    for num1 in ‘seq 9’<br>    do<br>        for num2 in ‘seq 9’<br>        do<br>            [ $num1 -le $num2 ] &amp;&amp; echo -e “$num1 x $num2 &#x3D; ‘$(($num1*$num2))’ “<br>        done<br>        echo ‘’<br>    done</p>
+<p>\t 制表符 \n换行符 \b 删除前一个字符  \f 换行但光标仍旧停留在原来的位置   \r 光标移至行首，但不换行 </p>
+<p>猜数游戏</p>
+<p>数字比较</p>
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>一个临时的Linux笔记</div>
+      <div>http://example.com/2023/03/30/Linux (3)/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>冷星</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2023年3月30日</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2023/04/24/%E7%BD%91%E7%BB%9C%E5%9F%BA%E7%A1%80/" title="网络基础知识">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">网络基础知识</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2023/03/28/Java/" title="Java学习">
+                        <span class="hidden-mobile">Java学习</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.0/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.18.2/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/4.3.1/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>
